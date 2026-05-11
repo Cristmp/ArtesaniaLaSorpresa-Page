@@ -14,6 +14,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 3rem 4rem;
+    border-bottom: 1px solid #646D61;
+    position: fixed;
 }
 
 .contentNav{
@@ -74,3 +76,38 @@
     font-family: "Poppins", sans-serif;
     cursor: pointer;
 }
+
+/*Primera sección de la página ======== INICIO*/
+
+.section-1{
+    width: 100%;
+    height: 100vh;
+    background: #6CC1C5;
+    background: radial-gradient(circle at bottom right,rgba(108, 193, 197, 1) 0%, rgba(34, 40, 42, 1) 30%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-content{
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    color: white;
+}
+
+.text-cont h1{
+    font-family: "DM Serif Display", serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 3rem;
+}
+
+
+.img-section-1 {
+    width: 700px;
+    display: flex;
+    justify-content: start;
+};
