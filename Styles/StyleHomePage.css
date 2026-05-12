@@ -16,6 +16,8 @@
     padding: 3rem 4rem;
     border-bottom: 1px solid #646D61;
     position: fixed;
+    top: 0;
+    z-index: 100;
 }
 
 .contentNav{
@@ -81,12 +83,28 @@
 
 .section-1{
     width: 100%;
-    height: 100vh;
+    margin-top: 2rem;
+    height: 90vh;
     background: #6CC1C5;
     background: radial-gradient(circle at bottom right,rgba(108, 193, 197, 1) 0%, rgba(34, 40, 42, 1) 30%);
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.form-1{
+    width: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.form-2{
+    width: 300px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 .grid-content{
@@ -98,16 +116,139 @@
     color: white;
 }
 
+.text-cont {
+    font-family: "Poppins", serif;
+}
+
 .text-cont h1{
     font-family: "DM Serif Display", serif;
     font-size: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     line-height: 3rem;
+    font-weight: 400;
 }
 
+.content-section-1{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+}
 
 .img-section-1 {
-    width: 700px;
+    width: 650px;
     display: flex;
     justify-content: start;
-};
+}
+
+.btn-start{
+    all: unset;
+    background-color: #E96324;
+    color: white;
+    padding: 0.5rem 4rem;
+    border-radius: 10px;
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;   
+    cursor: pointer;
+    font-size: 1.5rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 1rem;
+}
+
+.btn-start:hover{
+    background-color: #9e2611;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+    transform: translateY(-4px);
+    transition: all 0.1s ease-in-out;
+}
+
+.btn-start:active{
+    background-color: #3f1008;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+    transform: translateY(4px);
+    transition: all 0.1s ease-in-out;
+}
+
+.section-2{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(/Assets/fondoArtesania2.jpg);
+    background-size: cover;
+    background-position: center;
+    filter:saturate(0);
+}
+
+.quien-somos{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.title-section2{
+    color: white;
+}
+
+.title-section2 h1{
+    font-family: "Dm Serif Display", serif;
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.title-section2 p{
+    font-family: "Poppins", serif;
+    margin-top: 10px;
+}
+
+.section-video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    height: 45vh;
+    gap: 4rem;
+}
+
+.cont-video{
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: grid;
+}
+
+.cont-video video{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.section-info{
+    width: 30%;
+    height: 100%;
+    background: #262626;
+    background: linear-gradient(180deg,rgba(38, 38, 38, 1) 44%, rgba(181, 181, 181, 0) 100%);
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: left;
+    gap: 10px;
+    color: white;
+    padding: 2rem;
+}
+
+.section-info h2{
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.section-info p{
+    font-family: "Poppins", serif;
+}
