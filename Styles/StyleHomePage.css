@@ -329,4 +329,96 @@
 .section-4{
     height: 100vh;
     background-color: #22282A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px dashed #646D61;
+}
+
+.cont-business{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+}
+
+.info-business{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 2rem;
+    color: white;
+    font-family: "poppins";
+}
+
+.info-business h2{
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+}
+
+.back-card{
+    width: 33rem;
+    transform: rotate(-8deg);
+    height: 60vh;
+    background-color: #e4e4e4;
+    border-radius: 10px;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.front-card{
+    position: relative;
+    width: 33rem;
+    height: 60vh;
+    background-color: #e4e4e4;
+    border-radius: 10px;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25);
+    padding: 2rem;
+    font-family: "poppins";
+}
+
+.front-card h1{
+    font-family: "Dm Serif Display";
+    font-weight: 500;
+    font-size: 2.5rem;
+    margin-top: 10px;
+}
+
+.front-card img{
+    height: 60%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.valores{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.v-1{
+    color: #000000;
+    background-color: #CAD41D;
+    padding: 2px 1.5rem;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.v-1:hover{
+    transform: translateY(-4px);
+    transition: all 0.1s ease-in-out;
 }
