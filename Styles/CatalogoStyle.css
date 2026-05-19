@@ -152,7 +152,7 @@
 
 .section-products{
     width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
     height: auto;
     background-color: #EFEFEF; 
     display: grid;
@@ -243,6 +243,18 @@
     font-size: 1.25rem;
     font-weight: 600;
     color: #22282A;
+}
+
+/*Not found screen*/
+
+.no-resultados{
+    font-family: "poppins", sans-serif;
+    color: #8c8c8cff;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
 }
 
 /*FOOTER*/

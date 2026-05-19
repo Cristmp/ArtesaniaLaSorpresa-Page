@@ -74,33 +74,56 @@ const productos = [
 ];
 
 const contenedor = document.getElementById("card-cont");
+const buscador = document.getElementById("input-buscar");
+const NoResultado = document.getElementById("noResults")
 
-productos.forEach(producto => {
-    const card = document.createElement("div");
-    card.classList.add("card-product");
+const desplegarProductos = (listaProduct) => {
 
-    card.innerHTML = `
-        <div class="card-image">
+    contenedor.innerHTML = "";
 
-            <div class="card-info">
-                <p>Solo en tienda</p>
-            </div>
-
-            ${producto.oferta ? `
-                <div class="card-offer">
-                    <p><span class="oferta">${producto.txtoferta}</span></p>
+    if(listaProduct.length === 0){
+        NoResultado.style.display = "flex";
+    }else{
+        listaProduct.forEach(producto => {
+            const card = document.createElement("div");
+            card.classList.add("card-product");
+        
+            card.innerHTML = `
+                <div class="card-image">
+        
+                    <div class="card-info">
+                        <p>Solo en tienda</p>
+                    </div>
+        
+                    ${producto.oferta ? `
+                        <div class="card-offer">
+                            <p><span class="oferta">${producto.txtoferta}</span></p>
+                        </div>
+                    ` : ""}
+        
+                    <img src="${producto.imagen}" alt="${producto.nombre}">
                 </div>
-            ` : ""}
+        
+                <div class="card-description">
+                    <h3>${producto.nombre}</h3>
+                    <p>${producto.descripcion}</p>
+                    <p class="price">C$${producto.precio.toFixed(2)}</p>
+                </div>
+            `;
+        
+            contenedor.appendChild(card);
+        });
+        NoResultado.style.display = "none";
+    }
+};
 
-            <img src="${producto.imagen}" alt="${producto.nombre}">
-        </div>
+const manejoBusqueda = () => {
+    const buscarTerm = buscador.value.toLowerCase()
+    const filtroProduct = productos.filter((producto) => producto.nombre.toLowerCase().startsWith(buscarTerm));
 
-        <div class="card-description">
-            <h3>${producto.nombre}</h3>
-            <p>${producto.descripcion}</p>
-            <p class="price">C$${producto.precio.toFixed(2)}</p>
-        </div>
-    `;
+    desplegarProductos(filtroProduct);
+};
 
-    contenedor.appendChild(card);
-});
+desplegarProductos(productos);
+
+buscador.addEventListener("input", manejoBusqueda);
