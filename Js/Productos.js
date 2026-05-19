@@ -78,6 +78,7 @@ const contenedor = document.getElementById("card-cont");
 productos.forEach(producto => {
     const card = document.createElement("div");
     card.classList.add("card-product");
+
     card.innerHTML = `
         <div class="card-image">
 
@@ -85,9 +86,12 @@ productos.forEach(producto => {
                 <p>Solo en tienda</p>
             </div>
 
-            <div class="card-offer">
-                <p>${producto.oferta ? `<span class="oferta">${producto.txtoferta}</span>` : ""}</p>
-            </div>
+            ${producto.oferta ? `
+                <div class="card-offer">
+                    <p><span class="oferta">${producto.txtoferta}</span></p>
+                </div>
+            ` : ""}
+
             <img src="${producto.imagen}" alt="${producto.nombre}">
         </div>
 
@@ -97,5 +101,6 @@ productos.forEach(producto => {
             <p class="price">C$${producto.precio.toFixed(2)}</p>
         </div>
     `;
+
     contenedor.appendChild(card);
 });
