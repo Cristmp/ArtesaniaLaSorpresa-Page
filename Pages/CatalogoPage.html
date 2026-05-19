@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo</title>
+    <link rel="stylesheet" href="/Styles/CatalogoStyle.css">
+    <script src="https://kit.fontawesome.com/6c270bd83d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="navbar">
+        <section class="contentNav">
+            <h1>Logo</h1>
+
+            <nav>
+                <ul class="Menu">
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="#products">Catálogo</a></li>
+                    <li><a href="#about">Ofertas</a></li>
+                    <li><a href="#contact">Personalización</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="btns-nav">
+
+            <a href="Login.html">
+                <button class="btnLogin">
+                    Iniciar sesión
+                </button>
+            </a>
+
+            <a href="Register.html">
+                <button class="btnRegister">
+                    <P>Registrarse</P>
+                </button>
+            </a>
+        </section>
+    </header>
+
+    <header class="searching">
+        <div class="values">
+                <input type="text" placeholder="Buscar productos...">
+    
+            <select name="Categoría" id="">
+                <option value="" hidden>Categoría</option>
+                <option value="Ninguna">Ninguna</option>
+                <option value="categoria1">Categoría 1</option>
+                <option value="categoria2">Categoría 2</option>
+            </select>
+    
+            <select name="Precio" id="">
+                <option value="" hidden>Precio</option>
+                <option value="asc">Menor a mayor</option>
+                <option value="desc">Mayor a menor</option>
+            </select>
+        </div>
+
+    </header>
+
+    <main class="section-products">
+        <div class="cont-cards">
+            <div class="card-product">
+
+                <!--contenedor de imagen-->
+                <div class="card-image">
+                    <!--Labels de card-->
+                    <div class="card-info">
+                        <p>Solo en tienda</p>
+                    </div>
+
+                    <div class="card-offer">
+                        <p>Oferta especial</p>
+                    </div>
+                    <!--Imagen de la tarjeta-->
+                    <img src="/Assets/fondoArtesania2.jpg" alt="">
+                </div>
+
+                <!--Contenedor de información del producto-->
+                <div class="card-description">
+                    <h3>Producto 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+                    <p class="price">C$100.00</p>
+                </div>
+            </div>
+
+            <div class="card-product">
+    
+            </div>
+
+            <div class="card-product">
+    
+            </div>
+
+            <div class="card-product">
+    
+            </div>
+    
+        </div>
+    </main>
+</body>
+</html>
