@@ -197,7 +197,7 @@
 
 .title-section2 h1{
     font-family: "Dm Serif Display", serif;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 400;
     background-color: #000000;
     display: inline-block;
@@ -251,10 +251,10 @@
     padding: 2rem;
 }
 
-.section-info h2{
+.section-info h3{
     font-family: "DM Serif Display", serif;
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .section-info p{
@@ -282,7 +282,7 @@
 
 .header-text h2{
     font-family: "DM Serif Display", serif;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 400;
 }
 
@@ -308,7 +308,6 @@
     gap: 1rem;
     font-family: "Poppins";
     font-weight: 500;
-    font-size: 1.2rem;
 }
 
 .img-card{
@@ -361,7 +360,7 @@
 .info-business h2{
     font-family: "DM Serif Display", serif;
     font-weight: 400;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .back-card{
@@ -388,10 +387,10 @@
     font-family: "poppins";
 }
 
-.front-card h1{
+.front-card h2{
     font-family: "Dm Serif Display";
     font-weight: 500;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-top: 10px;
 }
 
@@ -495,12 +494,6 @@
     margin-bottom: 1rem;
 }
 
-.text-oferta h1{
-    line-height: 2.5rem;
-    font-size: 2.5rem;
-}
-
-
 .text-oferta button{
     all: unset;
     background-color: #d4d4d4;
@@ -532,10 +525,10 @@
     gap: 2rem;
 }
 
-.section-6 h1{
+.section-6 h2{
     font-family: "dm serif display", serif;
     font-weight: 400;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .info{
@@ -620,9 +613,6 @@
     flex-direction: column;
 }
 
-.icons-box h3{
-    font-size: 1.5rem;
-}
 
 /*cont-form/ CONTACTO*/
 

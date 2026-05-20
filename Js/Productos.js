@@ -5,7 +5,7 @@ const productos = [
         oferta: true,
         txtoferta: "2x1",
         descripcion: "cereza, fruto pequeño y redondo, de color rojo brillante,",
-        precio: 19.99,
+        precio: 19.00,
         imagen: "https://i.ibb.co/mrNnMJb9/ales-krivec-ZMZHcv-IVgbg-unsplash.jpg"
     },
     {
@@ -14,16 +14,16 @@ const productos = [
         oferta: false,
         txtoferta: "",
         descripcion: "artesanías hechas a manos con barro, cerámica, madera, vidrio.",
-        precio: 29.99,
+        precio: 29.00,
         imagen: "https://i.ibb.co/JwydxwFc/namroud-gorguis-FZWivbri0-Xk-unsplash.jpg"
     },
     {
         id: 3,
-        nombre: "juego de ceramica",
+        nombre: "Juego de ceramica",
         oferta: false,
         txtoferta: "",
         descripcion: "artesanías hechas a manos con barro, cerámica, madera, vidrio.",
-        precio: 39.99,
+        precio: 350.00,
         imagen: "https://i.ibb.co/gZ3tRcdz/chloe-bolton-R0qth-Xq3jec-unsplash.jpg"
     },
     {
@@ -46,56 +46,111 @@ const productos = [
     },
     {
         id: 6,
-        nombre: "Manzana roja",
-        oferta: true,
+        nombre: "Juego de ceramica",
+        oferta: false,
         txtoferta: "3x1",
-        descripcion: "manzana roja, jugosa y dulce, 100% natural.",
-        precio: 35.00,
-        imagen: "https://i.ibb.co/PZJDZb9Y/jk-sloan-co1wm-Dh-Pj-Kg-unsplash.jpg"
+        descripcion: "Hermoso juego de vasos y platos de ceramica.",
+        precio: 400.00,
+        imagen: "https://i.ibb.co/WWBtvgzS/wisnu-amaludin-w-N7xpa-TPf8c-unsplash.jpg"
     },
     {
         id: 7,
-        nombre: "Manzana roja",
-        oferta: true,
+        nombre: "Anafre",
+        oferta: false,
         txtoferta: "3x1",
-        descripcion: "manzana roja, jugosa y dulce, 100% natural.",
-        precio: 35.00,
-        imagen: "https://i.ibb.co/PZJDZb9Y/jk-sloan-co1wm-Dh-Pj-Kg-unsplash.jpg"
+        descripcion: "pequeño anafre caballo bayo para comida.",
+        precio: 240.00,
+        imagen: "https://i.ibb.co/TDp7S2R5/anafre-caballo-bayo.jpg"
     },
     {
         id: 8,
-        nombre: "Manzana roja",
+        nombre: "Jarras de barro",
+        oferta: false,
+        txtoferta: "",
+        descripcion: "Bellas jarras de barro para decoración.",
+        precio: 300.00,
+        imagen: "https://i.ibb.co/BVtmMVQL/Contenido-4.jpg"
+    },
+    {
+        id: 9,
+        nombre: "Muñecas de tusa",
+        oferta: false,
+        txtoferta: "",
+        descripcion: "Adorables muñecas decorativas de tusa.",
+        precio: 120.00,
+        imagen: "https://i.ibb.co/pryL9tRS/mu-ecas-de-tusa.jpg"
+    },
+    {
+        id: 10,
+        nombre: "Pulceras coloridas",
         oferta: true,
-        txtoferta: "3x1",
-        descripcion: "manzana roja, jugosa y dulce, 100% natural.",
-        precio: 35.00,
-        imagen: "https://i.ibb.co/PZJDZb9Y/jk-sloan-co1wm-Dh-Pj-Kg-unsplash.jpg"
+        txtoferta: "2x1",
+        descripcion: "lindas pulceras coloridas de hilo.",
+        precio: 20.00,
+        imagen: "https://i.ibb.co/BVc47XhF/pyrp-vingeran-GKk7d-qvl2-A-unsplash.jpg"
+    },
+    {
+        id: 11,
+        nombre: "Ornamentos",
+        oferta: false,
+        txtoferta: "",
+        descripcion: "Ornamentos decorativos de formas y colores variados",
+        precio: 60.00,
+        imagen: "https://i.ibb.co/dwqfR9HS/tamara-malaniy-n-Bp-Js-P2-WUh-U-unsplash.jpg"
     },
 ];
 
 const contenedor = document.getElementById("card-cont");
+const buscador = document.getElementById("input-buscar");
+const NoResultado = document.getElementById("noResults")
 
-productos.forEach(producto => {
-    const card = document.createElement("div");
-    card.classList.add("card-product");
-    card.innerHTML = `
-        <div class="card-image">
+const desplegarProductos = (listaProduct) => {
 
-            <div class="card-info">
-                <p>Solo en tienda</p>
-            </div>
+    contenedor.innerHTML = "";
 
-            <div class="card-offer">
-                <p>${producto.oferta ? `<span class="oferta">${producto.txtoferta}</span>` : ""}</p>
-            </div>
-            <img src="${producto.imagen}" alt="${producto.nombre}">
-        </div>
+    if(listaProduct.length === 0){
+        NoResultado.style.display = "flex";
+    }else{
+        listaProduct.forEach(producto => {
+            const card = document.createElement("div");
+            card.classList.add("card-product");
+        
+            card.innerHTML = `
+                <div class="card-image">
+        
+                    <div class="card-info">
+                        <p>Solo en tienda</p>
+                    </div>
+        
+                    ${producto.oferta ? `
+                        <div class="card-offer">
+                            <p><span class="oferta">${producto.txtoferta}</span></p>
+                        </div>
+                    ` : ""}
+        
+                    <img src="${producto.imagen}" alt="${producto.nombre}">
+                </div>
+        
+                <div class="card-description">
+                    <h3>${producto.nombre}</h3>
+                    <p>${producto.descripcion}</p>
+                    <p class="price">C$${producto.precio.toFixed(2)}</p>
+                </div>
+            `;
+        
+            contenedor.appendChild(card);
+        });
+        NoResultado.style.display = "none";
+    }
+};
 
-        <div class="card-description">
-            <h3>${producto.nombre}</h3>
-            <p>${producto.descripcion}</p>
-            <p class="price">C$${producto.precio.toFixed(2)}</p>
-        </div>
-    `;
-    contenedor.appendChild(card);
-});
+const manejoBusqueda = () => {
+    const buscarTerm = buscador.value.toLowerCase()
+    const filtroProduct = productos.filter((producto) => producto.nombre.toLowerCase().startsWith(buscarTerm));
+
+    desplegarProductos(filtroProduct);
+};
+
+desplegarProductos(productos);
+
+buscador.addEventListener("input", manejoBusqueda);

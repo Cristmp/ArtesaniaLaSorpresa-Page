@@ -93,7 +93,7 @@
     height: 2rem;
     background-color: #EFEFEF;
     display: flex;
-    justify-content: space-around;
+    justify-content:center;
     align-items: center;
     padding: 2.8rem;
     border-bottom: 1px solid #B2B2B2;
@@ -148,11 +148,53 @@
     display: flex;
 }
 
+/*FAVORITOS*/
+.searching a{
+    text-decoration: none;
+    color: #646D61;
+}
+
+.btn-favoritos{
+    display: flex;
+    gap: 0.4rem;
+    justify-content: center;
+    align-items: center;
+    font-family: "poppins", sans-serif;
+    background-color: #dadada;
+    padding: 10px 15px;
+    border-radius: 30px;
+}
+
+.btn-favoritos:hover{
+    background-color: #E96324;
+    transform: translateY(-4px);
+    transition: all 0.2s ease-in-out;
+    color: white;
+}
+
+.btn-ubi{
+    display: flex;
+    gap: 0.4rem;
+    justify-content: center;
+    align-items: center;
+    font-family: "poppins", sans-serif;
+    background-color: #dadada;
+    padding: 10px 15px;
+    border-radius: 30px;
+}
+
+.btn-ubi:hover{
+    background-color: #E96324;
+    transform: translateY(-4px);
+    transition: all 0.2s ease-in-out;
+    color: white;
+}
+
 /*Inicio de catálogo*/
 
 .section-products{
     width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
     height: auto;
     background-color: #EFEFEF; 
     display: grid;
@@ -225,6 +267,7 @@
 }
 
 .card-description{
+    height: 40%;
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -232,6 +275,7 @@
     font-family: "Poppins", sans-serif;
     font-size: 0.875rem;
     color: #555555;
+    justify-content: space-between;
 }
 
 .card-description h3{
@@ -243,6 +287,22 @@
     font-size: 1.25rem;
     font-weight: 600;
     color: #22282A;
+    background-color: #fddccd;
+    width: fit-content;
+    padding: 1px 10px;
+    border-radius: 30px;
+}
+
+/*Not found screen*/
+
+.no-resultados{
+    font-family: "poppins", sans-serif;
+    color: #8c8c8cff;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
 }
 
 /*FOOTER*/
