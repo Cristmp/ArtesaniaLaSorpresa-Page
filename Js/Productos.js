@@ -1,102 +1,102 @@
 const productos = [
     {
         id: 1,
-        nombre: "Reloj",
+        nombre: "Tarro de barro",
         oferta: true,
         txtoferta: "2x1",
-        descripcion: "cereza, fruto pequeño y redondo, de color rojo brillante,",
-        precio: 19.00,
-        imagen: "https://i.ibb.co/mrNnMJb9/ales-krivec-ZMZHcv-IVgbg-unsplash.jpg"
+        descripcion: "hermoso tarro de barro para almacenar cosas.",
+        precio: 300.00,
+        imagen: "https://i.ibb.co/NdQXG9nJ/IMG-6273.jpg"
     },
     {
         id: 2,
-        nombre: "Casette",
+        nombre: "Jarrones decorados",
         oferta: false,
         txtoferta: "",
-        descripcion: "artesanías hechas a manos con barro, cerámica, madera, vidrio.",
-        precio: 29.00,
-        imagen: "https://i.ibb.co/JwydxwFc/namroud-gorguis-FZWivbri0-Xk-unsplash.jpg"
+        descripcion: "Jarrones decorados con diseños de naturaleza",
+        precio: 250.00,
+        imagen: "https://i.ibb.co/7J7KK3ds/IMG-6368.jpg"
     },
     {
         id: 3,
-        nombre: "Juego de ceramica",
+        nombre: "Pequeño tarro de madera",
         oferta: false,
         txtoferta: "",
         descripcion: "artesanías hechas a manos con barro, cerámica, madera, vidrio.",
-        precio: 350.00,
-        imagen: "https://i.ibb.co/gZ3tRcdz/chloe-bolton-R0qth-Xq3jec-unsplash.jpg"
+        precio: 120.00,
+        imagen: "https://i.ibb.co/ds4mVhvp/IMG-6349.jpg"
     },
     {
         id: 4,
-        nombre: "bola de baseball",
-        oferta: false,
-        txtoferta: "",
+        nombre: "Llavero de baseball",
+        oferta: true,
+        txtoferta: "2x1",
         descripcion: "bola de baseball vieja y usada, sucia y manchada.",
-        precio: 20.00,
-        imagen: "https://i.ibb.co/9XBP2Sf/chris-briggs-x9-TCnx-NBof-E-unsplash.jpg"
+        precio: 35.00,
+        imagen: "https://i.ibb.co/PZjsL1zF/IMG-6183.jpg"
     },
     {
         id: 5,
-        nombre: "Manzana roja",
+        nombre: "taza de madera",
         oferta: true,
         txtoferta: "3x1",
         descripcion: "manzana roja, jugosa y dulce, 100% natural.",
-        precio: 35.00,
-        imagen: "https://i.ibb.co/PZJDZb9Y/jk-sloan-co1wm-Dh-Pj-Kg-unsplash.jpg"
+        precio: 160.00,
+        imagen: "https://i.ibb.co/yFbbgWy0/IMG-6355.jpg"
     },
     {
         id: 6,
-        nombre: "Juego de ceramica",
+        nombre: "Caballo de madera",
         oferta: false,
         txtoferta: "3x1",
         descripcion: "Hermoso juego de vasos y platos de ceramica.",
-        precio: 400.00,
-        imagen: "https://i.ibb.co/WWBtvgzS/wisnu-amaludin-w-N7xpa-TPf8c-unsplash.jpg"
+        precio: 160.00,
+        imagen: "https://i.ibb.co/CpxmRyc0/IMG-6330.jpg"
     },
     {
         id: 7,
-        nombre: "Anafre",
+        nombre: "Cesta de frutas artificiales",
         oferta: false,
         txtoferta: "3x1",
         descripcion: "pequeño anafre caballo bayo para comida.",
-        precio: 240.00,
-        imagen: "https://i.ibb.co/TDp7S2R5/anafre-caballo-bayo.jpg"
+        precio: 460.00,
+        imagen: "https://i.ibb.co/ymCvvrMx/IMG-6383.jpg"
     },
     {
         id: 8,
-        nombre: "Jarras de barro",
+        nombre: "Juego de bowls",
         oferta: false,
         txtoferta: "",
-        descripcion: "Bellas jarras de barro para decoración.",
+        descripcion: "juego de bowls y cucharones de madera",
         precio: 300.00,
-        imagen: "https://i.ibb.co/BVtmMVQL/Contenido-4.jpg"
+        imagen: "https://i.ibb.co/FbJFCBQy/bowl.jpg"
     },
     {
         id: 9,
-        nombre: "Muñecas de tusa",
+        nombre: "Mascara del güegüense",
         oferta: false,
         txtoferta: "",
-        descripcion: "Adorables muñecas decorativas de tusa.",
-        precio: 120.00,
-        imagen: "https://i.ibb.co/pryL9tRS/mu-ecas-de-tusa.jpg"
+        descripcion: "Mascara de madera de la obra El güegüense",
+        precio: 260.00,
+        imagen: "https://i.ibb.co/W4JXqqzJ/IMG-6270.jpg"
     },
     {
         id: 10,
-        nombre: "Pulceras coloridas",
+        nombre: "Monedero estampado",
         oferta: true,
         txtoferta: "2x1",
-        descripcion: "lindas pulceras coloridas de hilo.",
-        precio: 20.00,
-        imagen: "https://i.ibb.co/BVc47XhF/pyrp-vingeran-GKk7d-qvl2-A-unsplash.jpg"
+        descripcion: "https://i.ibb.co/DDxCvsHK/IMG-6185.jpg",
+        precio: 60.00,
+        imagen: "https://i.ibb.co/DDxCvsHK/IMG-6185.jpg"
     },
     {
         id: 11,
-        nombre: "Ornamentos",
+        nombre: "Bolso de mano",
         oferta: false,
         txtoferta: "",
-        descripcion: "Ornamentos decorativos de formas y colores variados",
+        descripcion: "pequeño bolso de mano de cuero",
         precio: 60.00,
-        imagen: "https://i.ibb.co/dwqfR9HS/tamara-malaniy-n-Bp-Js-P2-WUh-U-unsplash.jpg"
+        imagen: "https://i.ibb.co/bj97PQdh/IMG-6372.jpg"
     },
 ];
 
