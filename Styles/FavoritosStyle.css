@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f3f3f3;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1c2b2e;
+    padding: 15px 40px;
+    color: white;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.menu a {
+    margin: 0 15px;
+    color: #ccc;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: white;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-outline {
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.user-icon {
+    width: 30px;
+    height: 30px;
+    background: #ccc;
+    border-radius: 50%;
+}
+
+/* CONTENIDO */
+.container {
+    padding: 40px;
+    position: relative;
+}
+
+.back-btn {
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: white;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+/* TARJETA CENTRADA */
+.floating-card {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #eee;
+    padding: 15px 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.heart {
+    color: red;
+    font-size: 20px;
+}
+
+/* CAJA VACÍA */
+.empty-box {
+    background: #ddd;
+    height: 300px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.broken-heart {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    background: #e85d21;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    margin-top: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+    background: #1c2b2e;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    margin-top: 50px;
+}
+
+.footer-left h2 {
+    margin-bottom: 10px;
+}
+
+.socials span {
+    display: inline-block;
+    margin-right: 10px;
+    background: #444;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.email {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.footer-right {
+    display: flex;
+    gap: 60px;
+}
+
+.footer-right h4 {
+    margin-bottom: 10px;
+}
