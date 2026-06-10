@@ -3,111 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo</title>
-    <link rel="stylesheet" href="/Styles/CatalogoStyle.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Styles/FavoritosStyle.css">
     <script src="https://kit.fontawesome.com/6c270bd83d.js" crossorigin="anonymous"></script>
 </head>
 <body>
+     <!-- NAVBAR -->
     <header class="navbar">
         <section class="contentNav">
-            <h1>Logo</h1>
+            <h2>Logo</h2>
 
             <nav>
                 <ul class="Menu">
-                    <li><a href="/index.html">Inicio</a></li>
-                    <li><a href="#products">Catálogo</a></li>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="/Pages/CatalogoPage.html">Catálogo</a></li>
                     <li><a href="#about">Ofertas</a></li>
                     <li><a href="#contact">Personalización</a></li>
                 </ul>
             </nav>
         </section>
+    </header>
 
-        <section class="btns-nav">
+    <!-- CONTENIDO -->
+    <main class="container">
+        <section class="content-favoritos">
+            <div class="head-favoritos">
+                <button class="back-btn">Volver al catálogo</button>
+                <h1>Mis Favoritos</h1>
+            </div>
 
-            <a href="Login.html">
-                <button class="btnLogin">
-                    Iniciar sesión
-                </button>
-            </a>
+            <div class="favoritos-list">
+                <!-- Aquí se mostrarán los productos favoritos del usuario -->
+                <p>Aún no has agregado productos a tus favoritos.</p>
+            </div>
 
-            <a href="Register.html">
-                <button class="btnRegister">
-                    <P>Registrarse</P>
-                </button>
-            </a>
+                
         </section>
-    </header>
 
-    <header class="searching">
-        <!--BTN DE FAVORITOS-->
-        <a href="/Pages/FavoritosJasly.html">
-            <div class="btn-favoritos">
-                <i class="fa-solid fa-heart fa-xl"></i>
-                <p>Ver favoritos</p>
-            </div>
-        </a>
-
-        <!--BUSCADOR-->
-        <div class="values">
-                <input type="text" placeholder="Buscar productos..." id="input-buscar">
-    
-            <select name="Categoría" id="">
-                <option value="" hidden>Categoría</option>
-                <option value="Ninguna">Ninguna</option>
-                <option value="categoria1">Categoría 1</option>
-                <option value="categoria2">Categoría 2</option>
-            </select>
-    
-            <select name="Precio" id="">
-                <option value="" hidden>Precio</option>
-                <option value="asc">Menor a mayor</option>
-                <option value="desc">Mayor a menor</option>
-            </select>
-        </div>
-
-        <a href="#ubicación">
-            <div class="btn-ubi">
-                <p>Donde nos ubicamos?</p>
-                <i class="fa-solid fa-location-dot fa-xl"></i>
-            </div>
-        </a>
-
-    </header>
-
-    <main class="section-products">
-        <div class="cont-cards" id="card-cont">
-            <div class="card-product">
-                <!--contenedor de imagen-->
-                <div class="card-image">
-                    <!--Labels de card-->
-                    <div class="card-info">
-                        <p>Solo en tienda</p>
-                    </div>
-
-                    <div class="card-offer">
-                        <p>Oferta especial</p>
-                    </div>
-                    <!--Imagen de la tarjeta-->
-                    <img src="/Assets/fondoArtesania2.jpg" alt="">
-                </div>
-
-                <!--Contenedor de información del producto-->
-                <div class="card-description">
-                    <h3>Producto 1</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
-                    <p class="price">C$100.00</p>
-                </div>
-            </div>
-        </div>
-            <!--No results screen-->
-            <div class="no-resultados" id="noResults">
-                <i class="fa-solid fa-heart-crack fa-6x" style="color: #8d8d8d;"></i>
-                <h1>No encontramos resultados</h1>
-                <p>Lo sentimos, lo que estas buscando no está disponible en este momento</p>
-            </div>
     </main>
 
-    <!--=======FOOTER=======-->
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="cont-footer">
             <section class="info-footer">
@@ -175,6 +110,6 @@
             </section>
         </div>
     </footer>
-    <script src="/Js/Productos.js"></script>
+
 </body>
 </html>
