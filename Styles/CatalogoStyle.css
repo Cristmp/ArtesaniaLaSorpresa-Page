@@ -15,7 +15,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 3rem 4rem;
-    border-bottom: 1px solid #646D61;
     position: fixed;
     top: 0;
     z-index: 100;
@@ -91,12 +90,12 @@
     width: 100%;
     margin-top: 6rem;
     height: 2rem;
-    background-color: #EFEFEF;
+    background-color: #2c3335;
     display: flex;
     justify-content:center;
     align-items: center;
     padding: 2.8rem;
-    border-bottom: 1px solid #B2B2B2;
+    border-bottom: 1px solid #5f5e5e;
 }
 
 .values{
@@ -111,10 +110,11 @@
 .values input{
     width: 40%;
     padding: 1rem;
-    background-color: #e2e2e2;
-    border: 1px solid #B2B2B2;
+    background-color: #1e2122;
+    border: 1px solid #181515;
     border-radius: 5px;
     font-family: "Poppins", sans-serif;
+    color: white;
 }
 
 .values input:focus{
@@ -139,8 +139,10 @@
 }
 
 .values select{
+    all: unset;
     padding: 1rem 2rem;
-    border: 1px solid #B2B2B2;
+    background-color: #1e2122;
+    color: white;
     border-radius: 10px;
     font-family: "Poppins", sans-serif;
     appearance: none;
@@ -151,7 +153,7 @@
 /*FAVORITOS*/
 .searching a{
     text-decoration: none;
-    color: #646D61;
+    color: #757a73;
 }
 
 .btn-favoritos{
@@ -160,8 +162,8 @@
     justify-content: center;
     align-items: center;
     font-family: "poppins", sans-serif;
-    background-color: #dadada;
-    padding: 10px 15px;
+    background-color: #1e2122;
+    padding: 10px 20px;
     border-radius: 30px;
 }
 
@@ -178,7 +180,7 @@
     justify-content: center;
     align-items: center;
     font-family: "poppins", sans-serif;
-    background-color: #dadada;
+    background-color: #1e2122;
     padding: 10px 15px;
     border-radius: 30px;
 }
@@ -196,7 +198,7 @@
     width: 100%;
     min-height: 80vh;
     height: auto;
-    background-color: #EFEFEF; 
+    background-color: #2c3335; 
     display: grid;
     justify-content: center;
     padding: 5rem;
@@ -214,10 +216,10 @@
 .card-product{
     width: 350px;
     height: 400px;
-    background-color: white;
+    background-color: #1e2122;
     border-radius: 15px;
     padding: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 2px 4px 5px rgba(0,0,0,0.1);
     cursor: pointer;
 }
 
@@ -245,7 +247,8 @@
     left: 10px;
     padding: 5px 10px;
     border-radius: 30px;
-    background-color: rgba(255, 255, 255, 0.9);
+    color: white;
+    background-color: rgba(14, 14, 14, 0.9);
 }
 
 .card-offer{
@@ -274,20 +277,21 @@
     gap: 0.5rem;
     font-family: "Poppins", sans-serif;
     font-size: 0.875rem;
-    color: #555555;
+    color: rgb(226, 226, 226);
     justify-content: space-between;
 }
 
 .card-description h3{
     font-size: 1.25rem;
-    color: #22282A;
+    color: white;
 }
 
 .price{
     font-size: 1.25rem;
-    font-weight: 600;
-    color: #22282A;
-    background-color: #fddccd;
+    font-weight: 500;
+    color: rgb(26, 25, 25);
+    margin-top: 4px;
+    background-color: #E96324;
     width: fit-content;
     padding: 1px 10px;
     border-radius: 30px;
