@@ -15,10 +15,10 @@
 
             <nav>
                 <ul class="Menu">
-                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="/index.html">Inicio</a></li>
                     <li><a href="/Pages/CatalogoPage.html">Catálogo</a></li>
-                    <li><a href="#about">Ofertas</a></li>
-                    <li><a href="#contact">Personalización</a></li>
+                    <li><a href="/Pages/OfertasPage.html">Ofertas</a></li>
+                    <li><a href="/Pages/PersonalizacionPage.html">Personalización</a></li>
                 </ul>
             </nav>
         </section>
@@ -28,13 +28,20 @@
     <main class="container">
         <section class="content-favoritos">
             <div class="head-favoritos">
-                <button class="back-btn">Volver al catálogo</button>
-                <h1>Mis Favoritos</h1>
+                <div class="left-head">
+                    <button class="back-btn"> <i class="fa-solid fa-arrow-left"></i>Volver</button>
+                    <h1>Mis Favoritos</h1>
+                </div>
+
+                <div class="icon-favoritos">
+                    <i class="fa-solid fa-heart fa-2x" style="color: #E96324;"></i>
+                    <h3>0 favoritos</h3>
+                </div>
             </div>
 
-            <div class="favoritos-list">
+            <div class="favoritos-list" id="favoritos-container">
                 <!-- Aquí se mostrarán los productos favoritos del usuario -->
-                <p>Aún no has agregado productos a tus favoritos.</p>
+                <!-- Si no hay favoritos, mostrar un mensaje -->
             </div>
 
                 
@@ -110,6 +117,6 @@
             </section>
         </div>
     </footer>
-
+    <script src="/Js/Favoritos.js"></script>
 </body>
 </html>

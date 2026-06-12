@@ -103,3 +103,28 @@ const Recomendados = () => {
 }
 
 Recomendados();
+
+const BotonFavorito = () => {
+    const btnFavoritos = document.querySelector(".favorite-btn");
+
+    if (!btnFavoritos || !idSeleccionado) return;
+
+    btnFavoritos.addEventListener("click", () => {
+        let listaFavoritos = JSON.parse(localStorage.getItem("misFavoritos")) || [];
+
+        const idActual = parseInt(idSeleccionado);
+
+        if (listaFavoritos.includes(idActual)) {
+            listaFavoritos = listaFavoritos.filter(id => id !== idActual);
+            btnFavoritos.innerHTML = '<i class="fa-regular fa-heart"></i> Agregar a favoritos';
+        } else {
+            listaFavoritos.push(idActual);
+            btnFavoritos.innerHTML = '<i class="fa-solid fa-heart"></i> Quitar de favoritos';
+        }
+
+        localStorage.setItem("misFavoritos", JSON.stringify(listaFavoritos));
+
+        });
+};
+
+BotonFavorito();

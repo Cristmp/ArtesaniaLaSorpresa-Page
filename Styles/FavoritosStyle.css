@@ -52,6 +52,7 @@
 
 /* CONTENIDO */
 .container {
+    background-color: #22282A;
     width: 100%;
     min-height: 100vh;
     height: auto;
@@ -70,22 +71,193 @@
 }
 
 .head-favoritos{
-    color: #191D1E;
+    color: white;
     font-family: "Poppins", serif;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-head{
+    display: flex;
     flex-direction: column;
+    gap: 0.5rem;
+}
+
+.icon-favoritos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1e2122;
+    width: 150px;
+    height: 100%;
+    border-radius: 5px;
+    padding: 0.5rem;
+    color: white;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.back-btn{
+    all: unset;
+    width: 100px;
+    height: 40px;
+    background-color: #191D1E;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-family: "Poppins", serif;
+    margin-bottom: 1rem;
+}
+
+.back-btn:hover{
+    background-color: #0f1213;
 }
 
 .favoritos-list{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1rem;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
     gap: 1rem;
     margin-top: 2rem;
-    background: #eee;
+    background: #1e2122;
     height: 100%;
     border-radius: 10px;
-}   
+    position: relative;
+}
 
+
+.card-product{
+    width: 350px;
+    height: 400px;
+    background-color: #1e2122;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 2px 4px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.card-product:hover{
+    transform: translateY(-5px);
+    transition: all 0.2s ease-in-out;
+}
+
+
+.card-image{
+    object-fit: cover;
+    width: 100%;
+    height: 60%;
+    background-color: #e2e2e2;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-info{
+    font-family: "Poppins", sans-serif;
+    font-size: 0.875rem;
+    position: absolute;
+    top: 14px;
+    left: 10px;
+    padding: 5px 10px;
+    border-radius: 30px;
+    color: white;
+    background-color: rgba(14, 14, 14, 0.9);
+}
+
+.card-offer{
+    position: absolute;
+    top: 14px;
+    right: 0px;
+    padding: 5px 15px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: #EAFF59;
+    color: black;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.875rem;
+}
+
+.card-image img{
+    width: 100%;
+    height: 100%;
+}
+
+.card-description{
+    height: 40%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.875rem;
+    color: rgb(226, 226, 226);
+    justify-content: space-between;
+}
+
+.card-description h3{
+    font-size: 1.25rem;
+    color: white;
+}
+
+.price{
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: rgb(26, 25, 25);
+    margin-top: 4px;
+    background-color: #E96324;
+    width: fit-content;
+    padding: 1px 10px;
+    border-radius: 30px;
+}
+
+.no-resultados{
+    font-family: "poppins", sans-serif;
+    color: #8c8c8cff;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.explorar-btn button{
+    all: unset;
+    width: 150px;
+    height: 40px;
+    background-color: #E96324;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+}
+
+.explorar-btn button:hover{
+    background-color: #9e2611;
+    transform: translateY(-4px);
+    transition: all 0.2s ease-in-out;
+}
+
+.explorar-btn {
+    text-decoration: none;
+}
 
 /* FOOTER */
 .footer{
