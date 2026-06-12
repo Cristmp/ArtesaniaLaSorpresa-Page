@@ -253,7 +253,9 @@
 .cards{
   display: flex;
   gap: 20px;
-  padding-bottom: 10px;
+  padding: 10px;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
 
 .card{
@@ -282,6 +284,7 @@
 
 .card-content h4{
   display: -webkit-box;
+  line-clamp: 1;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;

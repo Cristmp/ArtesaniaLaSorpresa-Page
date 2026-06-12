@@ -2,6 +2,8 @@ const productos = [
     {
         id: 1,
         nombre: "Tarro de barro",
+        favorito: false,
+        tags: ["cerámica", "artesanía", "hecho a mano"],
         oferta: true,
         txtoferta: "2x1",
         descripcion: "hermoso tarro de barro para almacenar cosas.",
@@ -11,6 +13,8 @@ const productos = [
     {
         id: 2,
         nombre: "Jarrones decorados",
+        favorito: false,
+        tags: ["cerámica", "artesanía", "decoración"],
         oferta: false,
         txtoferta: "",
         descripcion: "Jarrones decorados con diseños de naturaleza",
@@ -20,6 +24,8 @@ const productos = [
     {
         id: 3,
         nombre: "Pequeño tarro de madera",
+        favorito: false,
+        tags: ["madera", "del hogar", "cocina"],
         oferta: false,
         txtoferta: "",
         descripcion: "artesanías hechas a manos con barro, cerámica, madera, vidrio.",
@@ -29,6 +35,8 @@ const productos = [
     {
         id: 4,
         nombre: "Llavero de baseball",
+        favorito: false,
+        tags: ["metál", "artesanía", "accesorios"],
         oferta: true,
         txtoferta: "2x1",
         descripcion: "bola de baseball vieja y usada, sucia y manchada.",
@@ -38,6 +46,8 @@ const productos = [
     {
         id: 5,
         nombre: "taza de madera",
+        favorito: false,
+        tags: ["madera", "artesanía", "cocina"],
         oferta: true,
         txtoferta: "3x1",
         descripcion: "manzana roja, jugosa y dulce, 100% natural.",
@@ -47,6 +57,8 @@ const productos = [
     {
         id: 6,
         nombre: "Caballo de madera",
+        favorito: false,
+        tags: ["madera", "decoración", "del hogar"],
         oferta: false,
         txtoferta: "3x1",
         descripcion: "Hermoso juego de vasos y platos de ceramica.",
@@ -56,6 +68,8 @@ const productos = [
     {
         id: 7,
         nombre: "Cesta de frutas artificiales",
+        favorito: false,
+        tags: ["madera", "del hogar", "decoración"],
         oferta: false,
         txtoferta: "3x1",
         descripcion: "pequeño anafre caballo bayo para comida.",
@@ -65,38 +79,46 @@ const productos = [
     {
         id: 8,
         nombre: "Juego de bowls",
+        favorito: false,
+        tags: ["madera", "artesanía", "cocina"],
         oferta: false,
         txtoferta: "",
         descripcion: "juego de bowls y cucharones de madera",
         precio: 300.00,
-        imagen: "https://i.ibb.co/FbJFCBQy/bowl.jpg"
+        imagen: ["https://i.ibb.co/FbJFCBQy/bowl.jpg", "https://i.ibb.co/WWP0m7Gw/IMG-6192.jpg"]
     },
     {
         id: 9,
         nombre: "Mascara del güegüense",
+        favorito: false,
+        tags: ["madera", "artesanía", "cultural"],
         oferta: false,
         txtoferta: "",
         descripcion: "Mascara de madera de la obra El güegüense",
         precio: 260.00,
-        imagen: "https://i.ibb.co/W4JXqqzJ/IMG-6270.jpg"
+        imagen: ["https://i.ibb.co/W4JXqqzJ/IMG-6270.jpg", "https://i.ibb.co/HLWhCs2y/IMG-6267.jpg"]
     },
     {
         id: 10,
         nombre: "Monedero estampado",
+        favorito: false,
+        tags: ["textil", "cuero", "accesorios"],
         oferta: true,
         txtoferta: "2x1",
-        descripcion: "https://i.ibb.co/DDxCvsHK/IMG-6185.jpg",
+        descripcion: "Hermoso monedero estampado con diseño de atardecer en la playa",
         precio: 60.00,
-        imagen: "https://i.ibb.co/DDxCvsHK/IMG-6185.jpg"
+        imagen: ["https://i.ibb.co/DDxCvsHK/IMG-6185.jpg", "https://i.ibb.co/LzVJ70SM/IMG-6186.jpg"]
     },
     {
         id: 11,
         nombre: "Bolso de mano",
+        favorito: false,
+        tags: ["textil", "cuero", "accesorios"],
         oferta: false,
         txtoferta: "",
         descripcion: "pequeño bolso de mano de cuero",
         precio: 60.00,
-        imagen: "https://i.ibb.co/bj97PQdh/IMG-6372.jpg"
+        imagen: ["https://i.ibb.co/bj97PQdh/IMG-6372.jpg", "https://i.ibb.co/FqXtfzHg/IMG-6373.jpg"]
     },
 ];
 
