@@ -64,6 +64,11 @@ const desplegarFavoritos = () => {
 
         contenedorFavs.appendChild(card);
     });
+
+    const cantidad = document.getElementById("cant-fav")
+        cantidad.innerHTML = `
+                    <h3> ${listaIDs.length} favoritos
+        `
 };
 
 desplegarFavoritos();
