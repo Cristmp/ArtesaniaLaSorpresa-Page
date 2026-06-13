@@ -50,11 +50,13 @@
     background-color: rgba(0, 0, 0, 0.6);
     width: 100%;
     height: 100%;
+    visibility: hidden;
     opacity: 0;
     transition: all 0.3s ease-in-out;
 }
 
 .NavPhone.active{
+    visibility: visible;
     opacity: 1;
 }
 
@@ -74,6 +76,7 @@
     border-bottom-left-radius: 15px;
     box-shadow: 0px 15px 5px black;
     transition: all 0.3s ease-in-out;
+    padding-bottom: 25px;
 }
 
 .card-menu.active{
@@ -284,22 +287,25 @@
     min-height: 80vh;
     height: auto;
     background-color: #2c3335; 
-    display: grid;
+    display: flex;
     justify-content: center;
-    padding: 5rem;
+    padding: 5rem 2rem;
 }
 
 .cont-cards{
-    width: 80%;
+    width: 100%;
+    max-width: 1400px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-items: center;
 }
 
 /*==========ESTILO DE LAS CARDS==========*/
 
 .card-product{
-    width: 350px;
+    width: 100%;
+    max-width: 340px;
     height: 400px;
     background-color: #1e2122;
     border-radius: 15px;
@@ -529,6 +535,14 @@
     display: block;
   }
 
+  .section-products{
+    padding: 3rem 1rem;
+  }
+
+
+  .cont-cards{
+    gap: 1.5rem;
+  }
   /*Footer phone*/
   .footer {
     height: auto !important;
