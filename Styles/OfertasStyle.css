@@ -84,8 +84,7 @@
 
 /*CONTENEDOR*/
 body {
-    background: #ececec;
-    font-family: arial, sans-serif;
+    background: #22282A;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -93,8 +92,7 @@ body {
 }
 
 .contenedor{
-    width: 90%;
-    max-width: 90%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -104,34 +102,33 @@ body {
 
 /*BANNERS*/
 .banner{
+    cursor: pointer;
     width: 100%;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(2, 0, 8, 0.534);
     background: rgb(255, 255, 255);
+    object-fit: fill;
 }
 
 /* IMÁGENES */
 .banner img {
     width: 100%;
-    display: grid;
-    height: auto;
+    height: 100%;
     object-fit: cover;
 }
 
-/*ALTURAS*/
-.banner1 img{
-    height: 335px;
+@media (max-width: 480px) {
+    .contenedor{
+        width: 100%;
+    }
 }
 
-.banner2 img{
-    height: 335px;
+@media (max-width: 768px) {
+    .contenedor{
+        width: 90%;
+    }
 }
-
-.banner3 img{
-    height: 335px;
-}
-
 
 /*=======FOOTER======*/
 .footer{
