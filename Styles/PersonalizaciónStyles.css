@@ -71,10 +71,11 @@ body{
     background-color: #1e2122;
     border: 1px solid #323333 ;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .btn-menu{
-    color: white;
+    color: #a0a0a0;
 }
 
 .btns-nav{
@@ -335,102 +336,6 @@ textarea::placeholder{
   background: #bccc1f;
 }
 
-/* RESPONSIVE */
-@media(max-width: 992px){
-  .custom-section{
-    grid-template-columns: 1fr;
-  }
-  .divider-line {
-    display: none;
-  }
-
-  .double-input{
-    grid-template-columns: 1fr;
-  }
-
-  input{
-    height: 60px;
-  }
-
-  textarea{
-    height: 130px;
-  }
-
-  .navbar{
-    padding: 3rem 3rem;
-  }
-
-  .navActions{
-    display: none;
-  }
-
-  .bar{
-    display: block;
-  }
-
-  /*Footer phone*/
-  .footer {
-    height: auto !important;
-    padding: 40px 0;
-  }
-
-  .cont-footer {
-    flex-direction: column; 
-    gap: 50px; 
-    width: 90%;
-    height: auto !important;
-  }
-
-  .info-footer{
-    width: 100%;
-    height: auto !important;
-    gap: 30px;
-  }
-
-  .text-socials{
-    text-align: center;
-    align-items: center;
-  }
-
-  .text-socials div h2 {
-    font-size: 1.4rem;
-  }
-  
-  icons{
-    justify-content: center;
-    margin-top: 10px;
-  }
-
-  .copy{
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 15px;
-    padding-top: 20px;
-  }
-
-  .legals {
-    justify-content: center;
-  }
-
-  .nav-footer{
-    width: 100%;
-    height: auto !important;
-    gap: 25px;
-  }
-
-  .head-footer h3{
-    text-align: center;
-  }
-    
-  .down-info{
-    flex-direction: row;
-    justify-content: space-around;
-    text-align: center;
-  }
-}
-
-
 .footer{
     width: 100%;
     height: 60vh;
@@ -549,4 +454,99 @@ textarea::placeholder{
 .down-info ul a{
     color: white;
     text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media(max-width: 992px){
+  .custom-section{
+    grid-template-columns: 1fr;
+  }
+  .divider-line {
+    display: none;
+  }
+
+  .double-input{
+    grid-template-columns: 1fr;
+  }
+
+  input{
+    height: 60px;
+  }
+
+  textarea{
+    height: 130px;
+  }
+
+  .navbar{
+    padding: 3rem 3rem;
+  }
+
+  .navActions{
+    display: none;
+  }
+
+  .bar{
+    display: block;
+  }
+
+  /*Footer phone*/
+  .footer {
+    height: auto !important;
+    padding: 40px 0;
+  }
+
+  .cont-footer {
+    flex-direction: column; 
+    gap: 50px; 
+    width: 90%;
+    height: auto !important;
+  }
+
+  .info-footer{
+    width: 100%;
+    height: auto !important;
+    gap: 30px;
+  }
+
+  .text-socials{
+    text-align: center;
+    align-items: center;
+  }
+
+  .text-socials div h2 {
+    font-size: 1.4rem;
+  }
+  
+  icons{
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .copy{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    padding-top: 20px;
+  }
+
+  .legals {
+    justify-content: center;
+  }
+
+  .nav-footer{
+    width: 100%;
+    height: auto !important;
+    gap: 25px;
+  }
+
+  .head-footer h3{
+    text-align: center;
+  }
+    
+  .down-info{
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+  }
 }
