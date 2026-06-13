@@ -5,20 +5,35 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-/*INICIO DEL FOOTER*/
-.navbar{
+/*NAVBAR*/
+.navbar {
     width: 100%;
     height: 4rem;
     background-color: #22282A;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 4rem;
     padding: 3rem 4rem;
     border-bottom: 1px solid #646D61;
     position: fixed;
     top: 0;
-    z-index: 100;
+    z-index: 150; /* subido de 100 a 150 para que quede sobre el menú móvil */
+}
+
+.bar{
+    display: none;
+}
+
+.navbar h2{
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+
+.navActions{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .contentNav{
@@ -29,8 +44,68 @@
     font-family: "Poppins", sans-serif;
 }
 
-.contentNav h1{
-    font-family: "DM Serif Display", serif;
+.NavPhone {
+    position: fixed;
+    z-index: 120; /* se mantiene en 120 */
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.NavPhone.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.card-menu {
+    background-color: rgb(31, 34, 35);
+    position: fixed;
+    transform: translateX(30rem);
+    top: 6rem; /* Cambiado de 0 a 6rem (la misma altura donde inicia tu sección de búsqueda o main) */
+    right: 0;
+    padding: 20px;
+    width: 400px;
+    height: calc(100vh - 6rem); /* Ajusta el alto dinámicamente para que ocupe el resto de la pantalla sin solaparse arriba */
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: -5px 5px 15px rgba(0,0,0,0.5); /* Sombra suavizada hacia la izquierda */
+    transition: all 0.3s ease-in-out;
+    padding-bottom: 25px;
+}
+.card-menu.active{
+    transform: translateX(0rem);
+}
+
+.MenuPhone{
+    list-style: none;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.MenuPhone li{
+    padding: 15px 10px;
+    border-top: 1px solid #5f5e5e;
+    cursor: pointer;
+}
+
+.MenuPhone li:hover{
+    background-color: #191D1E;
+}
+
+.MenuPhone a{
+    font-family: "Poppins";
+    text-decoration: none;
+    color: white;
 }
 
 .Menu {
@@ -49,6 +124,19 @@
     transition: all 0.2s ease-in-out;
 }   
 
+.btn-menu{
+    all: unset;
+    padding: 15px;
+    background-color: #1e2122;
+    border: 1px solid #323333 ;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-menu{
+    color: white;
+}
+
 .btns-nav{
     display: flex;
     gap: 1rem;
@@ -58,6 +146,7 @@
 .btns-nav a{
     text-decoration: none;
 }
+
 
 .btnRegister{
     background-color: #22282A;
@@ -73,7 +162,6 @@
 
 .btnLogin{
     all: unset;
-    background-color: #22282A;
     color: white;
     font-size: 1rem;
     font-family: "Poppins", sans-serif;
@@ -805,4 +893,87 @@
 .down-info ul a{
     color: white;
     text-decoration: none;
+}
+
+@media(max-width: 992px){
+  .navbar{
+    padding: 3rem 3rem;
+  }
+
+  .navActions{
+    display: none;
+  }
+
+  .bar{
+    display: block;
+  }
+
+  .section-products{
+    padding: 3rem 1rem;
+  }
+
+
+  .cont-cards{
+    gap: 1.5rem;
+  }
+  /*Footer phone*/
+  .footer {
+    height: auto !important;
+    padding: 40px 0;
+  }
+
+  .cont-footer {
+    flex-direction: column; 
+    gap: 50px; 
+    width: 90%;
+    height: auto !important;
+  }
+
+  .info-footer{
+    width: 100%;
+    height: auto !important;
+    gap: 30px;
+  }
+
+  .text-socials{
+    text-align: center;
+    align-items: center;
+  }
+
+  .text-socials div h2 {
+    font-size: 1.4rem;
+  }
+  
+  icons{
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .copy{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    padding-top: 20px;
+  }
+
+  .legals {
+    justify-content: center;
+  }
+
+  .nav-footer{
+    width: 100%;
+    height: auto !important;
+    gap: 25px;
+  }
+
+  .head-footer h3{
+    text-align: center;
+  }
+    
+  .down-info{
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+  }
 }

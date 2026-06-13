@@ -1,17 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body{
-    background-color: #22282A;
+  background-color: #22282A;
 }
-
-/* NAVBAR */
-.navbar{
+/*NAVBAR*/
+.navbar {
     width: 100%;
     height: 4rem;
     background-color: #22282A;
@@ -23,7 +22,7 @@ body{
     border-bottom: 1px solid #646D61;
     position: fixed;
     top: 0;
-    z-index: 100;
+    z-index: 150; /* subido de 100 a 150 para que quede sobre el menú móvil */
 }
 
 .bar{
@@ -47,6 +46,70 @@ body{
     gap: 4rem;
     color: white;
     font-family: "Poppins", sans-serif;
+}
+
+.NavPhone {
+    position: fixed;
+    z-index: 120; /* se mantiene en 120 */
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.NavPhone.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.card-menu {
+    background-color: rgb(31, 34, 35);
+    position: fixed;
+    transform: translateX(30rem);
+    top: 6rem; /* Cambiado de 0 a 6rem (la misma altura donde inicia tu sección de búsqueda o main) */
+    right: 0;
+    padding: 20px;
+    width: 400px;
+    height: calc(100vh - 6rem); /* Ajusta el alto dinámicamente para que ocupe el resto de la pantalla sin solaparse arriba */
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: -5px 5px 15px rgba(0,0,0,0.5); /* Sombra suavizada hacia la izquierda */
+    transition: all 0.3s ease-in-out;
+    padding-bottom: 25px;
+}
+.card-menu.active{
+    transform: translateX(0rem);
+}
+
+.MenuPhone{
+    list-style: none;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.MenuPhone li{
+    padding: 15px 10px;
+    border-top: 1px solid #5f5e5e;
+    cursor: pointer;
+}
+
+.MenuPhone li:hover{
+    background-color: #191D1E;
+}
+
+.MenuPhone a{
+    font-family: "Poppins";
+    text-decoration: none;
+    color: white;
 }
 
 .Menu {
@@ -75,7 +138,7 @@ body{
 }
 
 .btn-menu{
-    color: #a0a0a0;
+    color: white;
 }
 
 .btns-nav{
@@ -103,7 +166,6 @@ body{
 
 .btnLogin{
     all: unset;
-    background-color: #22282A;
     color: white;
     font-size: 1rem;
     font-family: "Poppins", sans-serif;
