@@ -173,6 +173,158 @@
 }
 /*FIN DEL FOOTER*/
 
+/*Login window*/
+.login{
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 160;
+    background-color: hsl(0, 0%, 0%, 40%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.login-card{
+    background-color: #161B1F;
+    max-width: 540px;
+    width: 100%;
+    height: 550px;
+    padding: 20px 50px;
+    border-radius: 12px;
+    color: white;
+    box-shadow: 5px 10px 30px black;
+    font-family: "Poppins";
+    position: relative;
+}
+
+
+.form-login{
+    margin-top: 1rem;
+    border-top: 1px solid #323333;
+    padding-top: 20px;
+    height: 60%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.form-login button{
+    width: 100%;
+    padding: 15px 5px;
+    font-family: "Poppins";
+    border-radius: 12px;
+    background-color: #E96324;
+    color: white;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+.form-login button:hover{
+    background-color: #9e2611;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.inputs input{
+    all: unset;
+    padding: 15px 20px;
+    border-radius: 8px;
+    background-color: #101316;
+    color: white;
+    border: 1px solid #323333;
+}
+
+.login-card img{
+    margin-top: 2rem;
+}
+
+.closebtn{
+    all: unset;
+    position: absolute;
+    color:#5f5e5e;
+    padding: 10px;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    margin: 1rem;
+}
+
+.register{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 160;
+    background-color: hsl(0, 0%, 0%, 40%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.register-card{
+    background-color: #161B1F;
+    max-width: 540px;
+    width: 100%;
+    height: 700px;
+    padding: 20px 50px;
+    border-radius: 12px;
+    color: white;
+    box-shadow: 5px 10px 30px black;
+    font-family: "Poppins";
+    position: relative;
+}
+
+.form-register{
+    margin-top: 1rem;
+    border-top: 1px solid #323333;
+    padding-top: 20px;
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.form-register button{
+    width: 100%;
+    padding: 15px 5px;
+    font-family: "Poppins";
+    border-radius: 12px;
+    background-color: #E96324;
+    color: white;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+.form-register button:hover{
+    background-color: #9e2611;
+}
+
+.register-card img{
+    margin-top: 2rem;
+}
+
+.login.active, .register.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*Login window END*/
+
 /*Primera sección de la página ======== INICIO*/
 
 .section-1{
@@ -231,6 +383,10 @@
     gap: 1rem;
 }
 
+.content-section-1 a{
+    text-decoration: none;
+}
+
 .content-section-1 img{
     width: 300px;;
     margin-top: 3rem;
@@ -263,12 +419,6 @@
     transition: all 0.1s ease-in-out;
 }
 
-.btn-start:active{
-    background-color: #3f1008;
-    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
-    transform: translateY(4px);
-    transition: all 0.1s ease-in-out;
-}
 
 .section-2{
     height: 100vh;
@@ -422,6 +572,8 @@
 
 .card-1:hover{
     transform: translateY(-4px);
+    background-color: #161B1F;
+    color: white;
 }
 
 .img-card{
@@ -502,9 +654,9 @@
 }
 
 .front-card h2{
-    font-family: "Dm Serif Display";
-    font-weight: 500;
-    font-size: 2rem;
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 1.5rem;
     margin-top: 10px;
 }
 
@@ -516,19 +668,19 @@
 }
 
 .valores{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: 1rem;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
 
 .v-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #000000;
     background-color: #CAD41D;
-    padding: 2px 1.5rem;
+    padding: 5px 1.5rem;
     border-radius: 30px;
     cursor: pointer;
 }
@@ -608,6 +760,10 @@
     margin-bottom: 1rem;
 }
 
+.text-oferta a{
+    text-decoration: none;
+}
+
 .text-oferta button{
     all: unset;
     background-color: #d4d4d4;
@@ -617,6 +773,13 @@
     font-weight: 400;   
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s ease-in-out;
+}
+
+.text-oferta button:hover{
+    transform: translateY(-4px);
+    background-color: #161B1F;
+    color: white;
 }
 
 .cont-ofertas img{
@@ -682,7 +845,7 @@
     width: 100%;
     height: 100%;
     border-radius: 20px;
-    display: flex;  
+    display: flex;
     background: #3EB0B4;
     background: linear-gradient(141deg,rgba(62, 176, 180, 1) 0%, rgba(185, 248, 255, 1) 100%);
     padding: 10px;
@@ -719,6 +882,12 @@
     font-weight: 400;   
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s ease-in-out;
+}
+
+.cont-box button:hover{
+    background-color: #161B1F;
+    color: white;
 }
 
 .icons-box{
@@ -929,6 +1098,15 @@
     display: block;
   }
 
+  .login-card{
+    max-width: 450px;
+  }
+
+  .register-card{
+    max-width: 450px;
+    height: 750px;
+  }
+
   /*responsive Página principal*/
   .section-1 {
     padding: 6rem 1rem 3rem 1rem;
@@ -1130,6 +1308,10 @@
     width: 100%;
     max-width: 500px;
     height: auto;
+  }
+
+  .valores{
+    grid-template-columns: repeat(2, 1fr);
   }
 
   /*Footer phone*/

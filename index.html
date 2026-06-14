@@ -9,6 +9,54 @@
 </head>
 <body>
     <!-- Navbar -->
+    <div class="login">
+        <div class="login-card">
+            <button class="closebtn"><i class="fa-solid fa-xmark fa-lg"></i></button>
+
+            <div>
+                <img src="/Assets/la sorpresa logo_blanco.svg" width="150px" alt="">
+                <h2>Iniciar sesión</h2>
+                <p>Accede a tu cuenta para acceder a todas las funciones</p>
+            </div>
+
+            <form action="" class="form-login">
+                <div class="inputs">
+                    <label for="">Email</label>
+                    <input type="text" placeholder="Tu correo electronico aquí">
+                    <label for="">Contraseña</label>
+                    <input type="password" placeholder="Tu contraseña aquí">
+                </div>
+                <button>Iniciar sesión</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="register">
+        <div class="register-card">
+            <button class="closebtn"><i class="fa-solid fa-xmark fa-lg"></i></button>
+
+            <div>
+                <img src="/Assets/la sorpresa logo_blanco.svg" width="150px" alt="">
+                <h2>Registrate</h2>
+                <p>Crea una cuenta para acceder a todas las funciones</p>
+            </div>
+
+            <form action="" class="form-register">
+                <div class="inputs">
+                    <label for="">Nombre</label>
+                    <input type="text" placeholder="Tu nombre">
+                    <label for="">Email</label>
+                    <input type="text" placeholder="Tu correo electronico aquí">
+                    <label for="">Contraseña</label>
+                    <input type="password" placeholder="Tu contraseña aquí">
+                    <label for="">Confirmar contraseña</label>
+                    <input type="password" placeholder="Repite tu contraseña">
+                </div>
+                <button>Iniciar sesión</button>
+            </form>
+        </div>
+    </div>
+
     <header class="navbar">
     <img src="/Assets/la sorpresa logo_blanco.svg" width="100px" alt="">
       <div class="navActions">
@@ -28,18 +76,13 @@
 
         <section class="btns-nav">
                 
-            <a href="Login.html">
               <button class="btnLogin">
                 Iniciar sesión
               </button>
-            </a>
             
-            <a href="Register.html">
               <button class="btnRegister">
                 <P>Registrarse</P>
               </button>
-            </a>
-
         </section>
       </div>
           
@@ -60,20 +103,16 @@
              <a href="/Pages/BlogPage.html"><li>Blog</li></a>
             </ul>
     
-            <section class="btns-nav">
-                    
-                <a href="Login.html">
+            <section class="btns-nav">       
+               
                   <button class="btnLogin">
                     Iniciar sesión
                   </button>
-                </a>
-                
-                <a href="Register.html">
+           
                   <button class="btnRegister">
                     <P>Registrarse</P>
                   </button>
-                </a>
-    
+              
             </section>
         </div>
     </div>
@@ -93,9 +132,11 @@
                     <h1>Te damos una cordial bienvenida</h1>
                     <p>Conoce nuestros productos y servicios, somos un negocio comprometido con entregarle al cliente un trabajo de calidad.</p>
                 </div>
-                <button class="btn-start">
-                    <p>Iniciar</p>
-                </button>
+                
+                    <button class="btn-start btn-Login">
+                        <p>Iniciar</p>
+                    </button>
+
             </section>
 
             <section class="img-section-1">
@@ -151,37 +192,44 @@
                     </div>
                 </a>
 
-                <div class="card-1">
-                    <div class="img-card">
-                        <img src="https://i.ibb.co/BVtmMVQL/Contenido-4.jpg" alt="">
+                <a href="/Pages/CatalogoPage.html">
+                    <div class="card-1">
+                        <div class="img-card">
+                            <img src="https://i.ibb.co/BVtmMVQL/Contenido-4.jpg" alt="">
+                        </div>
+    
+                        <p>Del hogar</p>
                     </div>
+                </a>
 
-                    <p>Del hogar</p>
-                </div>
-
-                <div class="card-1">
-                    <div class="img-card">
-                        <img src="https://i.ibb.co/RkKffDSc/traje-t-pico.jpg" alt="">
+                <a href="/Pages/CatalogoPage.html">
+                    <div class="card-1">
+                        <div class="img-card">
+                            <img src="https://i.ibb.co/RkKffDSc/traje-t-pico.jpg" alt="">
+                        </div>
+    
+                        <p>Vestimenta</p>
                     </div>
+                </a>
 
-                    <p>Vestimenta</p>
-                </div>
-
-                <div class="card-1">
-                    <div class="img-card">
-                        <img src="https://i.ibb.co/BVc47XhF/pyrp-vingeran-GKk7d-qvl2-A-unsplash.jpg" alt="">
+                <a href="/Pages/CatalogoPage.html">
+                    <div class="card-1">
+                        <div class="img-card">
+                            <img src="https://i.ibb.co/BVc47XhF/pyrp-vingeran-GKk7d-qvl2-A-unsplash.jpg" alt="">
+                        </div>
+    
+                        <p>Accesorios</p>
                     </div>
-
-                    <p>Accesorios</p>
-                </div>
-
-                <div class="card-1">
-                    <div class="img-card">
-                        <img src="https://i.ibb.co/pryL9tRS/mu-ecas-de-tusa.jpg" alt="">
+                </a>
+                <a href="/Pages/CatalogoPage.html">
+                    <div class="card-1">
+                        <div class="img-card">
+                            <img src="https://i.ibb.co/pryL9tRS/mu-ecas-de-tusa.jpg" alt="">
+                        </div>
+    
+                        <p>Más</p>
                     </div>
-
-                    <p>Más</p>
-                </div>
+                </a>
             </section>
         </div>
         
@@ -197,7 +245,7 @@
                 </div>
 
                 <div class="front-card">
-                    <img src="Assets/fondoArtesania2.jpg" alt="">
+                    <img src="Assets//IMG_7335.jpg" alt="">
 
                     <div>
                         <h2>Artesanía la sopresa</h2>
@@ -206,15 +254,19 @@
 
                     <div class="valores">
                         <div class="v-1">
-                            Cultura
+                            Cultural
                         </div>
 
                         <div class="v-1">
-                            Identidad
+                            Compromiso
                         </div>
 
                         <div class="v-1">
                             Calidad
+                        </div>
+
+                        <div class="v-1">
+                            Creatividad
                         </div>
 
                     </div>
@@ -226,9 +278,7 @@
                 <div class="mision">
                     <i class="fa-solid fa-bottle-droplet fa-3x" style="color: #e96324; margin-left: -12px;margin-bottom: 10px;"></i>
                     <h2>Misión</h2>
-                    <p>Nuestra misión es crear artesanías únicas y personalizadas que reflejen la cultura y tradición de nuestra región, ofreciendo un producto de alta calidad y un servicio excepcional.</p>
-                    <br>
-                    <p>Nuestra misión es crear artesanías únicas y personalizadas que reflejen la cultura y tradición de nuestra región, ofreciendo un producto de alta calidad y un servicio excepcional.</p>
+                    <p>Convertirnos en un referente de la artesanía tradicional, impulsando el talento de los artesanos y manteniendo vivas las expresiones culturales que forman parte de nuestra identidad.</p>
                 </div>
 
                 <div class="vision">
@@ -252,7 +302,9 @@
                 <section class="text-oferta">
                     <h1>¡NO TE PIERDAS NUESTROS DESCUENTOS!</h1>
                     <p>Explora las ofertas que tenemos para tí</p>
-                    <button>Ver ofertas</button>
+                    <a href="/Pages/OfertasPage.html">
+                        <button>Ver ofertas</button>
+                    </a>
                 </section>
             </div>
                 
@@ -305,7 +357,7 @@
                             <i class="fa-solid fa-tag fa-3x" style="color: #ffffff;"></i>
                             <h3>No conoces <br>nuestros <br>productos?</h3>
                         </div>
-                        <button>Hecha un vistazo <i class="fa-solid fa-angle-right" style="color: rgb(30, 48, 80);"></i></button>
+                        <button>Hecha un vistazo <i class="fa-solid fa-angle-right"></i></button>
                     </div>
                 </div>
             </section>

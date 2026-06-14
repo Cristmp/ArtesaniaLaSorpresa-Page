@@ -16,7 +16,55 @@
 <body>
 
   <!-- HEADER -->
-  <header class="navbar">
+  <div class="login">
+        <div class="login-card">
+            <button class="closebtn"><i class="fa-solid fa-xmark fa-lg"></i></button>
+
+            <div>
+                <img src="/Assets/la sorpresa logo_blanco.svg" width="150px" alt="">
+                <h2>Iniciar sesión</h2>
+                <p>Accede a tu cuenta para acceder a todas las funciones</p>
+            </div>
+
+            <form action="" class="form-login">
+                <div class="inputs">
+                    <label for="">Email</label>
+                    <input type="text" placeholder="Tu correo electronico aquí">
+                    <label for="">Contraseña</label>
+                    <input type="password" placeholder="Tu contraseña aquí">
+                </div>
+                <button>Iniciar sesión</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="register">
+        <div class="register-card">
+            <button class="closebtn"><i class="fa-solid fa-xmark fa-lg"></i></button>
+
+            <div>
+                <img src="/Assets/la sorpresa logo_blanco.svg" width="150px" alt="">
+                <h2>Registrate</h2>
+                <p>Crea una cuenta para acceder a todas las funciones</p>
+            </div>
+
+            <form action="" class="form-register">
+                <div class="inputs">
+                    <label for="">Nombre</label>
+                    <input type="text" placeholder="Tu nombre">
+                    <label for="">Email</label>
+                    <input type="text" placeholder="Tu correo electronico aquí">
+                    <label for="">Contraseña</label>
+                    <input type="password" placeholder="Tu contraseña aquí">
+                    <label for="">Confirmar contraseña</label>
+                    <input type="password" placeholder="Repite tu contraseña">
+                </div>
+                <button>Iniciar sesión</button>
+            </form>
+        </div>
+    </div>
+
+    <header class="navbar">
     <img src="/Assets/la sorpresa logo_blanco.svg" width="100px" alt="">
       <div class="navActions">
         <section class="contentNav">
@@ -35,18 +83,13 @@
 
         <section class="btns-nav">
                 
-            <a href="Login.html">
               <button class="btnLogin">
                 Iniciar sesión
               </button>
-            </a>
             
-            <a href="Register.html">
               <button class="btnRegister">
                 <P>Registrarse</P>
               </button>
-            </a>
-
         </section>
       </div>
           
@@ -67,20 +110,16 @@
              <a href="/Pages/BlogPage.html"><li>Blog</li></a>
             </ul>
     
-            <section class="btns-nav">
-                    
-                <a href="Login.html">
+            <section class="btns-nav">       
+               
                   <button class="btnLogin">
                     Iniciar sesión
                   </button>
-                </a>
-                
-                <a href="Register.html">
+           
                   <button class="btnRegister">
                     <P>Registrarse</P>
                   </button>
-                </a>
-    
+              
             </section>
         </div>
     </div>
