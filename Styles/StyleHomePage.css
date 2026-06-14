@@ -398,6 +398,11 @@
     gap: 1.5rem;
 }
 
+.carrousel a{
+    text-decoration: none;
+    color: black;
+}
+
 .card-1{
     width: 250px;
     height: 100%;
@@ -412,6 +417,11 @@
     gap: 1rem;
     font-family: "Poppins";
     font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.card-1:hover{
+    transform: translateY(-4px);
 }
 
 .img-card{
