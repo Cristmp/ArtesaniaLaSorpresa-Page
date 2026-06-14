@@ -1,12 +1,36 @@
 document.addEventListener("DOMContentLoaded", () => {
     const loginModal = document.querySelector(".login");
+    const ubiModal = document.querySelector(".ubi")
     const registerModal = document.querySelector(".register");
     
     const loginButtons = document.querySelectorAll(".btnLogin, .btn-start");
     const registerButtons = document.querySelectorAll(".btnRegister");
+    const ubiButtons = document.querySelectorAll(".btn-ubi");
 
+    const closeUbi = ubiModal?.querySelector(".closeubi")
     const closeLogin = loginModal?.querySelector(".closebtn");
     const closeRegister = registerModal?.querySelector(".closebtn");
+
+    ubiButtons.forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            if (ubiModal) {
+                ubiModal.classList.add("active");
+
+                loginModal?.classList.remove("active");
+                registerModal?.classList.remove("active");
+
+                document.getElementById("Nav-phone")?.classList.remove("active");
+                document.getElementById("Card-phone")?.classList.remove("active");
+            }
+        });
+    });
+
+    closeUbi?.addEventListener("click", () => ubiModal?.classList.remove("active"));
+
+    window.addEventListener("click", (e) => {
+        if (e.target === ubiModal) ubiModal.classList.remove("active");
+    });
 
     loginButtons.forEach(btn => {
         btn.addEventListener("click", () => {
