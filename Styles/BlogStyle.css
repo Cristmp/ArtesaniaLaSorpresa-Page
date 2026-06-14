@@ -21,6 +21,10 @@
     z-index: 150; /* subido de 100 a 150 para que quede sobre el menú móvil */
 }
 
+.navbar img{
+    margin-top: 1rem;
+}
+
 .bar{
     display: none;
 }
