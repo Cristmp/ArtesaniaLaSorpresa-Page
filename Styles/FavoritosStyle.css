@@ -1,159 +1,774 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
-
-body {
-    background: #f3f3f3;
-}
-
-/* NAVBAR */
+/*NAVBAR*/
 .navbar {
+    width: 100%;
+    height: 4rem;
+    background-color: #22282A;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #1c2b2e;
-    padding: 15px 40px;
+    gap: 4rem;
+    padding: 3rem 4rem;
+    border-bottom: 1px solid #646D61;
+    position: fixed;
+    top: 0;
+    z-index: 150; /* subido de 100 a 150 para que quede sobre el menú móvil */
+}
+
+.navbar img{
+    margin-top: 1rem;
+}
+
+.bar{
+    display: none;
+}
+
+.navbar h2{
+    font-family: "Poppins", sans-serif;
     color: white;
 }
 
-.logo {
-    font-weight: bold;
-    font-size: 20px;
+.navActions{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
-.menu a {
-    margin: 0 15px;
-    color: #ccc;
+.contentNav{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+.NavPhone {
+    position: fixed;
+    z-index: 120; /* se mantiene en 120 */
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.NavPhone.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.card-menu {
+    background-color: rgb(31, 34, 35);
+    position: fixed;
+    transform: translateX(30rem);
+    top: 6rem; /* Cambiado de 0 a 6rem (la misma altura donde inicia tu sección de búsqueda o main) */
+    right: 0;
+    padding: 20px;
+    width: 400px;
+    height: calc(100vh - 6rem); /* Ajusta el alto dinámicamente para que ocupe el resto de la pantalla sin solaparse arriba */
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: -5px 5px 15px rgba(0,0,0,0.5); /* Sombra suavizada hacia la izquierda */
+    transition: all 0.3s ease-in-out;
+    padding-bottom: 25px;
+}
+.card-menu.active{
+    transform: translateX(0rem);
+}
+
+.MenuPhone{
+    list-style: none;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.MenuPhone li{
+    padding: 15px 10px;
+    border-top: 1px solid #5f5e5e;
+    cursor: pointer;
+}
+
+.MenuPhone li:hover{
+    background-color: #191D1E;
+}
+
+.MenuPhone a{
+    font-family: "Poppins";
+    text-decoration: none;
+    color: white;
+}
+
+.Menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}   
+
+.Menu a{
+    text-decoration: none;
+    color: white;
+}   
+
+.Menu li:hover{
+    transform: translateY(-4px);
+    transition: all 0.2s ease-in-out;
+}   
+
+.btn-menu{
+    all: unset;
+    padding: 15px;
+    background-color: #1e2122;
+    border: 1px solid #323333 ;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-menu{
+    color: white;
+}
+
+.btns-nav{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.btns-nav a{
     text-decoration: none;
 }
 
-.menu a:hover {
+
+.btnRegister{
+    background-color: #22282A;
     color: white;
+    border: 2px solid white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
 }
 
-.actions {
+.btnLogin{
+    all: unset;
+    color: white;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+} 
+
+/*Login window*/
+.login{
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 160;
+    background-color: hsl(0, 0%, 0%, 40%);
     display: flex;
     align-items: center;
-    gap: 15px;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.btn-outline {
-    border: 1px solid white;
-    background: transparent;
+.login-card{
+    background-color: #161B1F;
+    max-width: 540px;
+    width: 100%;
+    height: 550px;
+    padding: 20px 50px;
+    border-radius: 12px;
     color: white;
-    padding: 6px 12px;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.user-icon {
-    width: 30px;
-    height: 30px;
-    background: #ccc;
-    border-radius: 50%;
-}
-
-/* CONTENIDO */
-.container {
-    padding: 40px;
+    box-shadow: 5px 10px 30px black;
+    font-family: "Poppins";
     position: relative;
 }
 
-.back-btn {
-    border: 1px solid #ccc;
-    padding: 6px 12px;
-    border-radius: 20px;
-    background: white;
+
+.form-login{
+    margin-top: 1rem;
+    border-top: 1px solid #323333;
+    padding-top: 20px;
+    height: 60%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.form-login button{
+    width: 100%;
+    padding: 15px 5px;
+    font-family: "Poppins";
+    border-radius: 12px;
+    background-color: #E96324;
+    color: white;
+    font-weight: 500;
+    border: none;
     cursor: pointer;
-    margin-bottom: 20px;
 }
 
-h2 {
-    margin-bottom: 20px;
+.form-login button:hover{
+    background-color: #9e2611;
 }
 
-/* TARJETA CENTRADA */
-.floating-card {
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.inputs input{
+    all: unset;
+    padding: 15px 20px;
+    border-radius: 8px;
+    background-color: #101316;
+    color: white;
+    border: 1px solid #323333;
+}
+
+.login-card img{
+    margin-top: 2rem;
+}
+
+.closebtn{
+    all: unset;
     position: absolute;
-    top: 100px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #eee;
-    padding: 15px 25px;
+    color:#5f5e5e;
+    padding: 10px;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    margin: 1rem;
+}
+
+.register{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 160;
+    background-color: hsl(0, 0%, 0%, 40%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.register-card{
+    background-color: #161B1F;
+    max-width: 540px;
+    width: 100%;
+    height: 700px;
+    padding: 20px 50px;
+    border-radius: 12px;
+    color: white;
+    box-shadow: 5px 10px 30px black;
+    font-family: "Poppins";
+    position: relative;
+}
+
+.form-register{
+    margin-top: 1rem;
+    border-top: 1px solid #323333;
+    padding-top: 20px;
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.form-register button{
+    width: 100%;
+    padding: 15px 5px;
+    font-family: "Poppins";
+    border-radius: 12px;
+    background-color: #E96324;
+    color: white;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+.form-register button:hover{
+    background-color: #9e2611;
+}
+
+.register-card img{
+    margin-top: 2rem;
+}
+
+.login.active, .register.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*Login window END*/
+
+
+/* CONTENIDO */
+.container {
+    background-color: #22282A;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    padding: 4rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+.content-favoritos{
+    margin-top: 6rem;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.head-favoritos{
+    color: white;
+    font-family: "Poppins", serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-head{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.icon-favoritos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1e2122;
+    border: 1px solid #323333;
+    width: 150px;
+    height: 100%;
+    border-radius: 5px;
+    padding: 0.5rem;
+    color: white;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.back-btn{
+    all: unset;
+    width: 100px;
+    height: 40px;
+    background-color: #191D1E;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-family: "Poppins", serif;
+    margin-bottom: 1rem;
+}
+
+.back-btn:hover{
+    background-color: #0f1213;
+}
+
+.favoritos-list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1rem;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    background: #1e2122;
+    height: 100%;
     border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
-.heart {
-    color: red;
-    font-size: 20px;
-}
 
-/* CAJA VACÍA */
-.empty-box {
-    background: #ddd;
-    height: 300px;
+.card-product{
+    width: 350px;
+    height: 400px;
+    background-color: #1e2122;
+    border:1px solid #323333;
     border-radius: 15px;
+    padding: 10px;
+    box-shadow: 2px 4px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.card-product:hover{
+    transform: translateY(-5px);
+    transition: all 0.2s ease-in-out;
+}
+
+
+.card-image{
+    object-fit: cover;
+    width: 100%;
+    height: 60%;
+    background-color: #e2e2e2;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-info{
+    font-family: "Poppins", sans-serif;
+    font-size: 0.875rem;
+    position: absolute;
+    top: 14px;
+    left: 10px;
+    padding: 5px 10px;
+    border-radius: 30px;
+    color: white;
+    background-color: rgba(14, 14, 14, 0.9);
+}
+
+.card-offer{
+    position: absolute;
+    top: 14px;
+    right: 0px;
+    padding: 5px 15px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: #EAFF59;
+    color: black;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.875rem;
+}
+
+.card-image img{
+    width: 100%;
+    height: 100%;
+}
+
+.card-description{
+    height: 40%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.875rem;
+    color: rgb(226, 226, 226);
+    justify-content: space-between;
+}
+
+.card-description h3{
+    font-size: 1.25rem;
+    color: white;
+}
+
+.price{
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: rgb(26, 25, 25);
+    margin-top: 4px;
+    background-color: #E96324;
+    width: fit-content;
+    padding: 1px 10px;
+    border-radius: 30px;
+}
+
+.no-resultados{
+    font-family: "poppins", sans-serif;
+    color: #8c8c8cff;
+    position: absolute;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 80px;
-    text-align: center;
 }
 
-.broken-heart {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-
-.btn-primary {
-    background: #e85d21;
-    border: none;
+.explorar-btn button{
+    all: unset;
+    width: 150px;
+    height: 40px;
+    background-color: #E96324;
     color: white;
-    padding: 10px 25px;
-    margin-top: 10px;
-    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+    font-family: "Poppins", serif;
+    font-weight: 500;
     cursor: pointer;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+}
+
+.explorar-btn button:hover{
+    background-color: #9e2611;
+    transform: translateY(-4px);
+    transition: all 0.2s ease-in-out;
+}
+
+.explorar-btn {
+    text-decoration: none;
 }
 
 /* FOOTER */
-.footer {
-    background: #1c2b2e;
-    color: white;
+.footer{
+    width: 100%;
+    height: 60vh;
+    background: #22282A;
+    background: linear-gradient(180deg,#22282A 20%, #191D1E 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #646D61;
+}
+
+.cont-footer{
+    width: 80%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 40px;
-    margin-top: 50px;
+    align-items: center;
 }
 
-.footer-left h2 {
-    margin-bottom: 10px;
-}
-
-.socials span {
-    display: inline-block;
-    margin-right: 10px;
-    background: #444;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-}
-
-.email {
-    margin-top: 10px;
-    font-size: 12px;
-}
-
-.footer-right {
+.info-footer{
+    color: white;
+    font-family: "Poppins", serif;
+    width: 70%;
+    height: 70%;
     display: flex;
-    gap: 60px;
+    flex-direction: column;
+    justify-content: space-between
 }
 
-.footer-right h4 {
-    margin-bottom: 10px;
+.icons{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.icon-rounded{
+    border: 1px solid #b6b6b6;
+    width: 50px;
+    height: 50px;
+    background: #6f726e;
+    background-color: linear-gradient(180deg,rgba(111, 114, 110, 1) 20%, rgba(182, 182, 182, 1) 20%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Poppins", serif;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.icon-rounded:hover{
+    background-color: #b6b6b6;
+    color: #191D1E;
+    border: 1px solid #191D1E;
+    transform: translateY(-4px);
+    transition: all 0.1s ease-in-out;
+}
+
+.text-socials{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.copy{
+    color: #b6b6b6;
+    border-top: 1px solid #646D61;
+    padding-top: 10px;
+    font-family: "Poppins", serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+.legals{
+    display: flex;
+    gap: 10px;
+    color: white;
+}
+
+.legals a{
+    color: white;
+    text-decoration: none;
+}
+
+.nav-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    width: 25%;
+    height: 70%;
+    justify-content: space-between;
+    font-family: "Poppins", serif;
+}
+
+.down-info{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.down-info ul{
+    margin-top: 20px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.down-info p{
+    font-weight: 700;
+    font-family: "Poppins", serif;
+}
+
+.down-info ul a{
+    color: white;
+    text-decoration: none;
+}
+
+
+@media(max-width: 992px){
+    .navbar{
+        padding: 3rem 3rem;
+    }
+    
+    .navActions{
+        display: none;
+    }
+    
+  .bar{
+      display: block;
+    }
+
+    .login-card{
+    max-width: 450px;
+  }
+
+  .register-card{
+    max-width: 450px;
+    height: 750px;
+  }
+    
+    .favoritos-list{
+        grid-template-columns: repeat(2, 1fr);
+        background-color: transparent;
+    }
+    
+    .head-favoritos{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .icon-favoritos{
+        height: 120px;
+        width: 60%;
+  }
+  
+  .left-head{
+      width: 100%;
+    }
+    
+    /*Footer phone*/
+    .footer {
+    height: auto !important;
+    padding: 40px 0;
+}
+
+.cont-footer {
+    flex-direction: column; 
+    gap: 50px; 
+    width: 90%;
+    height: auto !important;
+}
+
+.info-footer{
+    width: 100%;
+    height: auto !important;
+    gap: 30px;
+}
+
+.text-socials{
+    text-align: center;
+    align-items: center;
+}
+
+.text-socials div h2 {
+    font-size: 1.4rem;
+}
+
+icons{
+    justify-content: center;
+    margin-top: 10px;
+}
+
+  .copy{
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 15px;
+      padding-top: 20px;
+    }
+    
+  .legals {
+      justify-content: center;
+    }
+    
+    .nav-footer{
+        width: 100%;
+        height: auto !important;
+    gap: 25px;
+}
+
+.head-footer h3{
+    text-align: center;
+}
+
+.down-info{
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+}
+}
+
+@media(max-width: 600px){
+
+    .favoritos-list{
+    grid-template-columns: 1fr;
+    background-color: transparent;
+  }
+  .head-favoritos{
+    flex-direction: column;
+    gap: 1rem;
+  }
 }

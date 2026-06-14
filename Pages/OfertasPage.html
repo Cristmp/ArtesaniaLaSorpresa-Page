@@ -4,54 +4,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ofertas</title>
     <link rel="stylesheet" href="/Styles/OfertasStyle.css">
+    <script src="https://kit.fontawesome.com/6c270bd83d.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Navbar -->
-    <header class="navbar">
-        <section class="contentNav">
-            <h2>Logo</h2>
+    <div class="login">
+        <div class="login-card">
+            <button class="closebtn"><i class="fa-solid fa-xmark fa-lg"></i></button>
 
-            <nav>
-                <ul class="Menu">
-                    <li><a href="#home">Inicio</a></li>
-                    <li><a href="/Pages/CatalogoPage.html">Catálogo</a></li>
-                    <li><a href="#about">Ofertas</a></li>
-                    <li><a href="#contact">Personalización</a></li>
-                </ul>
-            </nav>
+            <div>
+                <img src="/Assets/la sorpresa logo_blanco.svg" width="150px" alt="">
+                <h2>Iniciar sesión</h2>
+                <p>Accede a tu cuenta para acceder a todas las funciones</p>
+            </div>
+
+            <form action="" class="form-login">
+                <div class="inputs">
+                    <label for="">Email</label>
+                    <input type="text" placeholder="Tu correo electronico aquí">
+                    <label for="">Contraseña</label>
+                    <input type="password" placeholder="Tu contraseña aquí">
+                </div>
+                <button>Iniciar sesión</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="register">
+        <div class="register-card">
+            <button class="closebtn"><i class="fa-solid fa-xmark fa-lg"></i></button>
+
+            <div>
+                <img src="/Assets/la sorpresa logo_blanco.svg" width="150px" alt="">
+                <h2>Registrate</h2>
+                <p>Crea una cuenta para acceder a todas las funciones</p>
+            </div>
+
+            <form action="" class="form-register">
+                <div class="inputs">
+                    <label for="">Nombre</label>
+                    <input type="text" placeholder="Tu nombre">
+                    <label for="">Email</label>
+                    <input type="text" placeholder="Tu correo electronico aquí">
+                    <label for="">Contraseña</label>
+                    <input type="password" placeholder="Tu contraseña aquí">
+                    <label for="">Confirmar contraseña</label>
+                    <input type="password" placeholder="Repite tu contraseña">
+                </div>
+                <button>Iniciar sesión</button>
+            </form>
+        </div>
+    </div>
+
+    <header class="navbar">
+    <img src="/Assets/la sorpresa logo_blanco.svg" width="100px" alt="">
+      <div class="navActions">
+        <section class="contentNav">
+          
+          <nav>
+            <ul class="Menu">
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/Pages/CatalogoPage.html">Catálogo</a></li>
+                <li><a href="/Pages/OfertasPage.html">Ofertas</a></li>
+                <li><a href="/Pages/PersonalizaciónPage.html">Personalización</a></li>
+                <li><a href="/Pages/BlogPage.html">Blog</a></li>
+            </ul>
+          </nav>
+            
         </section>
 
         <section class="btns-nav">
-
-            <a href="Login.html">
-                <button class="btnLogin">
-                    Iniciar sesión
-                </button>
-            </a>
-
-            <a href="Register.html">
-                <button class="btnRegister">
-                    <P>Registrarse</P>
-                </button>
-            </a>
+                
+              <button class="btnLogin">
+                Iniciar sesión
+              </button>
+            
+              <button class="btnRegister">
+                <P>Registrarse</P>
+              </button>
+        </section>
+      </div>
+          
+        <section class="bar">
+          <button class="btn-menu">
+            <i class="fa-solid fa-bars fa-xl"></i>
+          </button>
         </section>
     </header>
+
+    <div class="NavPhone" id="Nav-phone">
+        <div class="card-menu" id="Card-phone">
+            <ul class="MenuPhone">
+             <a href="/index.html"><li>Inicio</li></a>
+             <a href="/Pages/CatalogoPage.html"><li>Catálogo</li></a>
+             <a href="/Pages/OfertasPage.html"><li>Ofertas</li></a>
+             <a href="/Pages/PersonalizaciónPage.html"><li>Personalización</li></a>
+             <a href="/Pages/BlogPage.html"><li>Blog</li></a>
+            </ul>
+    
+            <section class="btns-nav">       
+               
+                  <button class="btnLogin">
+                    Iniciar sesión
+                  </button>
+           
+                  <button class="btnRegister">
+                    <P>Registrarse</P>
+                  </button>
+              
+            </section>
+        </div>
+    </div>
 
     
     <div class="contenedor">
 
         <!-- Banner 1 -->
-        <div class="banner banner1">
-            <img src="/Assets/monedero.jpg" alt="Banner1">
+        <div class="banner banner1 banner-oferta" data-id="10">
+            <img src="/Assets/monedero.jpg" alt="Banner1" >
         </div>
 
         <!-- Banner 2 -->
-        <div class="banner banner2">
-            <img src="/Assets/taza.jpg" alt="Banner2">. 
+        <div class="banner banner2 banner-oferta" data-id="5">
+            <img src="/Assets/taza.jpg" alt="Banner2">
         </div>
 
         <!-- Banner 3 -->
-        <div class="banner banner3">
+        <div class="banner banner3 banner-oferta" data-id="4">
             <img src="/Assets/llavero.jpg" alt="Banner3">
         </div>
     </div>
@@ -62,11 +141,11 @@
             <section class="info-footer">
 
             <div class="text-socials">
-                <h1>Logo</h1>
+                <img src="/Assets/la sorpresa logo_blanco.svg" width="200px" alt="">
                     
                 <div>
                     <h2>Síguenos en nuestras redes sociales!</h2>
-                    <p>Llevamos la cultura nica a todos los rincones</p>
+                    <p>El corazón de Nicaragua envuelto en cada pieza.</p>
                 </div>
                 
                 <div class="icons">
@@ -125,6 +204,7 @@
         </div>
     </footer>
     <!--=====FIN DEL FOOTER=====-->
-
+    <script src="/Js/Ventanas.js"></script>
+    <script src="/Js/Ofertas.js"></script>
 </body>
 </html>

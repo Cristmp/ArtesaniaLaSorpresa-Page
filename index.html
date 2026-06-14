@@ -9,35 +9,113 @@
 </head>
 <body>
     <!-- Navbar -->
-    <header class="navbar">
-        <section class="contentNav">
-            <h2>Logo</h2>
+    <div class="login">
+        <div class="login-card">
+            <button class="closebtn"><i class="fa-solid fa-xmark fa-lg"></i></button>
 
-            <nav>
-                <ul class="Menu">
-                    <li><a href="#home">Inicio</a></li>
-                    <li><a href="/Pages/CatalogoPage.html">Catálogo</a></li>
-                    <li><a href="#about">Ofertas</a></li>
-                    <li><a href="#contact">Personalización</a></li>
-                </ul>
-            </nav>
+            <div>
+                <img src="/Assets/la sorpresa logo_blanco.svg" width="150px" alt="">
+                <h2>Iniciar sesión</h2>
+                <p>Accede a tu cuenta para acceder a todas las funciones</p>
+            </div>
+
+            <form action="" class="form-login">
+                <div class="inputs">
+                    <label for="">Email</label>
+                    <input type="text" placeholder="Tu correo electronico aquí">
+                    <label for="">Contraseña</label>
+                    <input type="password" placeholder="Tu contraseña aquí">
+                </div>
+                <button>Iniciar sesión</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="register">
+        <div class="register-card">
+            <button class="closebtn"><i class="fa-solid fa-xmark fa-lg"></i></button>
+
+            <div>
+                <img src="/Assets/la sorpresa logo_blanco.svg" width="150px" alt="">
+                <h2>Registrate</h2>
+                <p>Crea una cuenta para acceder a todas las funciones</p>
+            </div>
+
+            <form action="" class="form-register">
+                <div class="inputs">
+                    <label for="">Nombre</label>
+                    <input type="text" placeholder="Tu nombre">
+                    <label for="">Email</label>
+                    <input type="text" placeholder="Tu correo electronico aquí">
+                    <label for="">Contraseña</label>
+                    <input type="password" placeholder="Tu contraseña aquí">
+                    <label for="">Confirmar contraseña</label>
+                    <input type="password" placeholder="Repite tu contraseña">
+                </div>
+                <button>Iniciar sesión</button>
+            </form>
+        </div>
+    </div>
+
+    <header class="navbar">
+    <img src="/Assets/la sorpresa logo_blanco.svg" width="100px" alt="">
+      <div class="navActions">
+        <section class="contentNav">
+          
+          <nav>
+            <ul class="Menu">
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/Pages/CatalogoPage.html">Catálogo</a></li>
+                <li><a href="/Pages/OfertasPage.html">Ofertas</a></li>
+                <li><a href="/Pages/PersonalizaciónPage.html">Personalización</a></li>
+                <li><a href="/Pages/BlogPage.html">Blog</a></li>
+            </ul>
+          </nav>
+            
         </section>
 
         <section class="btns-nav">
-
-            <a href="Login.html">
-                <button class="btnLogin">
-                    Iniciar sesión
-                </button>
-            </a>
-
-            <a href="Register.html">
-                <button class="btnRegister">
-                    <P>Registrarse</P>
-                </button>
-            </a>
+                
+              <button class="btnLogin">
+                Iniciar sesión
+              </button>
+            
+              <button class="btnRegister">
+                <P>Registrarse</P>
+              </button>
+        </section>
+      </div>
+          
+        <section class="bar">
+          <button class="btn-menu">
+            <i class="fa-solid fa-bars fa-xl"></i>
+          </button>
         </section>
     </header>
+
+    <div class="NavPhone" id="Nav-phone">
+        <div class="card-menu" id="Card-phone">
+            <ul class="MenuPhone">
+             <a href="/index.html"><li>Inicio</li></a>
+             <a href="/Pages/CatalogoPage.html"><li>Catálogo</li></a>
+             <a href="/Pages/OfertasPage.html"><li>Ofertas</li></a>
+             <a href="/Pages/PersonalizaciónPage.html"><li>Personalización</li></a>
+             <a href="/Pages/BlogPage.html"><li>Blog</li></a>
+            </ul>
+    
+            <section class="btns-nav">       
+               
+                  <button class="btnLogin">
+                    Iniciar sesión
+                  </button>
+           
+                  <button class="btnRegister">
+                    <P>Registrarse</P>
+                  </button>
+              
+            </section>
+        </div>
+    </div>
 
     <!-- SECCION DEL INICIO -->
     <main class="section-1">
@@ -49,14 +127,16 @@
 
         <div class="grid-content">
             <section class="content-section-1">
-                <h1>Logo</h1>
+                <img src="/Assets/la sorpresa logo_blanco.svg" alt="">
                 <div class="text-cont">
                     <h1>Te damos una cordial bienvenida</h1>
                     <p>Conoce nuestros productos y servicios, somos un negocio comprometido con entregarle al cliente un trabajo de calidad.</p>
                 </div>
-                <button class="btn-start">
-                    <p>Iniciar</p>
-                </button>
+                
+                    <button class="btn-start btn-Login">
+                        <p>Iniciar</p>
+                    </button>
+
             </section>
 
             <section class="img-section-1">
@@ -67,23 +147,26 @@
 
     <!-- SEGUNDA SECCIÓN VIDEO DE PRESENTACIÓN-->
     <main class="section-2">
+
+        <img src="Assets/fondoArtesania2.jpg" alt="">
+        
         <div class="quien-somos">
             <div class="title-section2">
                 <h1>¿Quiénes somos?</h1>
-                <p>Somos un negocio dedicado a la creación de artesanías personalizadas, con el fin de entregar a nuestros clientes un producto de calidad y que cumpla con sus expectativas.</p>
+                <p>Somos un negocio dedicado a la distribución de artesanías, con el fin de preservar y llevar la cultura a todo Estelí, ofreciendo productos de la mejor calidad</p>
             </div>
                 
             <div class="section-video">
                 <section class="cont-video">
                     <video controls>
-                        <source src="" type="video/mp4">
+                        <source src="/Assets/Video-ArtesaniaLaSorpresa.mp4" type="video/mp4">
                         Tu navegador no soporta el elemento de video.
                     </video>
                 </section>
 
                 <section class="section-info">
                     <h3>¿Qué ofrecemos?</h3>
-                    <p>Ofrecemos una amplia variedad de productos personalizados, desde tazas, camisetas, llaveros, entre otros. Además, contamos con un servicio de personalización para que puedas crear tu propio diseño.</p>    
+                    <p>Ofrecemos una amplia variedad de productos, desde tazas, camisetas, llaveros, entre otros. Además, contamos con un servicio de personalización para que puedas crear tu propio diseño.</p>    
                 </section>
             </div>
             
@@ -95,49 +178,58 @@
         <div>
             <section class="header-text">
                 <h2>Explora nuestro catálogo</h2>
-                <p>Explora nuestros productos según la categoría</p>
+                <p>Explora los mejores productos que podrás encontrar</p>
             </section>
 
             <section class="carrousel">
-                <div class="card-1">
-                    <div class="img-card">
-                        <img src="Assets/fondoArtesania.jpg" alt="">
+                <a href="/Pages/CatalogoPage.html">
+                    <div class="card-1">
+                        <div class="img-card">
+                            <img src="Assets/fondoArtesania.jpg" alt="">
+                        </div>
+    
+                        <p>Decoración</p>
                     </div>
+                </a>
 
-                    <p>Decoración</p>
-                </div>
-
-                <div class="card-1">
-                    <div class="img-card">
-                        <img src="https://i.ibb.co/BVtmMVQL/Contenido-4.jpg" alt="">
+                <a href="/Pages/CatalogoPage.html">
+                    <div class="card-1">
+                        <div class="img-card">
+                            <img src="https://i.ibb.co/BVtmMVQL/Contenido-4.jpg" alt="">
+                        </div>
+    
+                        <p>Del hogar</p>
                     </div>
+                </a>
 
-                    <p>Del hogar</p>
-                </div>
-
-                <div class="card-1">
-                    <div class="img-card">
-                        <img src="https://i.ibb.co/RkKffDSc/traje-t-pico.jpg" alt="">
+                <a href="/Pages/CatalogoPage.html">
+                    <div class="card-1">
+                        <div class="img-card">
+                            <img src="https://i.ibb.co/RkKffDSc/traje-t-pico.jpg" alt="">
+                        </div>
+    
+                        <p>Vestimenta</p>
                     </div>
+                </a>
 
-                    <p>Vestimenta</p>
-                </div>
-
-                <div class="card-1">
-                    <div class="img-card">
-                        <img src="https://i.ibb.co/BVc47XhF/pyrp-vingeran-GKk7d-qvl2-A-unsplash.jpg" alt="">
+                <a href="/Pages/CatalogoPage.html">
+                    <div class="card-1">
+                        <div class="img-card">
+                            <img src="https://i.ibb.co/BVc47XhF/pyrp-vingeran-GKk7d-qvl2-A-unsplash.jpg" alt="">
+                        </div>
+    
+                        <p>Accesorios</p>
                     </div>
-
-                    <p>Accesorios</p>
-                </div>
-
-                <div class="card-1">
-                    <div class="img-card">
-                        <img src="https://i.ibb.co/pryL9tRS/mu-ecas-de-tusa.jpg" alt="">
+                </a>
+                <a href="/Pages/CatalogoPage.html">
+                    <div class="card-1">
+                        <div class="img-card">
+                            <img src="https://i.ibb.co/pryL9tRS/mu-ecas-de-tusa.jpg" alt="">
+                        </div>
+    
+                        <p>Más</p>
                     </div>
-
-                    <p>Más</p>
-                </div>
+                </a>
             </section>
         </div>
         
@@ -153,7 +245,7 @@
                 </div>
 
                 <div class="front-card">
-                    <img src="Assets/fondoArtesania2.jpg" alt="">
+                    <img src="Assets//IMG_7335.jpg" alt="">
 
                     <div>
                         <h2>Artesanía la sopresa</h2>
@@ -162,15 +254,19 @@
 
                     <div class="valores">
                         <div class="v-1">
-                            Cultura
+                            Cultural
                         </div>
 
                         <div class="v-1">
-                            Identidad
+                            Compromiso
                         </div>
 
                         <div class="v-1">
                             Calidad
+                        </div>
+
+                        <div class="v-1">
+                            Creatividad
                         </div>
 
                     </div>
@@ -182,9 +278,7 @@
                 <div class="mision">
                     <i class="fa-solid fa-bottle-droplet fa-3x" style="color: #e96324; margin-left: -12px;margin-bottom: 10px;"></i>
                     <h2>Misión</h2>
-                    <p>Nuestra misión es crear artesanías únicas y personalizadas que reflejen la cultura y tradición de nuestra región, ofreciendo un producto de alta calidad y un servicio excepcional.</p>
-                    <br>
-                    <p>Nuestra misión es crear artesanías únicas y personalizadas que reflejen la cultura y tradición de nuestra región, ofreciendo un producto de alta calidad y un servicio excepcional.</p>
+                    <p>Convertirnos en un referente de la artesanía tradicional, impulsando el talento de los artesanos y manteniendo vivas las expresiones culturales que forman parte de nuestra identidad.</p>
                 </div>
 
                 <div class="vision">
@@ -208,7 +302,9 @@
                 <section class="text-oferta">
                     <h1>¡NO TE PIERDAS NUESTROS DESCUENTOS!</h1>
                     <p>Explora las ofertas que tenemos para tí</p>
-                    <button>Ver ofertas</button>
+                    <a href="/Pages/OfertasPage.html">
+                        <button>Ver ofertas</button>
+                    </a>
                 </section>
             </div>
                 
@@ -261,7 +357,7 @@
                             <i class="fa-solid fa-tag fa-3x" style="color: #ffffff;"></i>
                             <h3>No conoces <br>nuestros <br>productos?</h3>
                         </div>
-                        <button>Hecha un vistazo <i class="fa-solid fa-angle-right" style="color: rgb(30, 48, 80);"></i></button>
+                        <button>Hecha un vistazo <i class="fa-solid fa-angle-right"></i></button>
                     </div>
                 </div>
             </section>
@@ -296,11 +392,11 @@
             <section class="info-footer">
 
             <div class="text-socials">
-                <h1>Logo</h1>
+                <img src="/Assets/la sorpresa logo_blanco.svg" width="200px" alt="">
                     
                 <div>
                     <h2>Síguenos en nuestras redes sociales!</h2>
-                    <p>Llevamos la cultura nica a todos los rincones</p>
+                    <p>El corazón de Nicaragua envuelto en cada pieza.</p>
                 </div>
                 
                 <div class="icons">
@@ -359,7 +455,7 @@
         </div>
     </footer>
     <!--=====FIN DEL FOOTER=====-->
-
+    <script src="/Js/Ventanas.js"></script>
 
 </body>
 </html>
