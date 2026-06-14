@@ -192,60 +192,39 @@
     <div class="reviews-box">
 
       <h2 class="reviews-header">Reseñas</h2>
-
       <div class="header-line"></div>
 
-      <!-- Reseña 1 -->
-      <div class="review-card">
-
-        <div class="review-left">
-
-          <img 
-            src="" alt="usuario"
-            class="profile-img"
-          >
-
-          <div class="review-content">
-            <h3>Nombre de usuario</h3>
-            <p>
-              Texto de prueba para el prototipado de los comentarios
-            </p>
-            <span>publicado hace 1d</span>
+      
+      <div id="reviews-container">
+        <div class="review-card" data-static="true">
+          <div class="review-left">
+            <img src="/Assets/girlpfp.jpg" alt="usuario" class="profile-img">
+            <div class="review-content">
+              <h3>Belén_05</h3>
+              <p>Me encantó, la verdad es muy buen producto</p>
+              <span>publicado hace 1d</span>
+            </div>
           </div>
-
+          <div class="menu">•••</div>
         </div>
-
-        <div class="menu">•••</div>
-
-      </div>
-
-      <!-- Reseña 2 -->
-      <div class="review-card">
-
-        <div class="review-left">
-
-          <img 
-            src=""
-            alt="usuario"
-            class="profile-img"
-          >
-
-          <div class="review-content">
-            <h3>Nombre de usuario</h3>
-
-            <p>
-              Me gustó mucho el producto, muy lindo y encantador.
-            </p>
-
-            <span>publicado hace 2d</span>
+        
+        <div class="review-card" data-static="true">
+          <div class="review-left">
+            <img src="/Assets/Default_pfp.jpg" alt="usuario" class="profile-img">
+            <div class="review-content">
+              <h3>MarioK</h3>
+              <p>Me gustó mucho el producto, muy lindo y encantador.</p>
+              <span>publicado hace 2d</span>
+            </div>
           </div>
-
+          <div class="menu">•••</div>
         </div>
-
-        <div class="menu">•••</div>
-
       </div>
-
+      
+      <form id="comment-form" style="margin-bottom: 2rem; margin-top: 1rem; display: flex; flex-direction: column; gap: 10px;">
+        <textarea id="comment-text" placeholder="Escribe tu reseña aquí..." rows="3" required style="width: 100%; padding: 10px; background-color: #1c1c1c; border-radius: 8px; border: 1px solid #333333;color: white; font-family: 'Poppins', sans-serif; resize: none;"></textarea>
+        <button type="submit" style="align-self: flex-end; font-family: 'Poppins'; padding: 15px 20px; background-color: #E96324; color: white; border: none; border-radius: 12px; font-weight: 600; cursor: pointer;">Publicar reseña</button>
+      </form>
     </div>
 
   </div>

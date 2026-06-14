@@ -127,4 +127,97 @@ const BotonFavorito = () => {
         });
 };
 
+document.addEventListener("DOMContentLoaded", () => {
+    const commentForm = document.getElementById("comment-form");
+    const commentInput = document.getElementById("comment-text");
+    const reviewsContainer = document.getElementById("reviews-container");
+
+    // Identificador único para los comentarios de esta página/producto
+    const STORAGE_KEY = "product_reviews_marina";
+
+    // 1. Cargar comentarios guardados de localStorage al iniciar
+    loadComments();
+
+    // 2. Evento para escuchar cuando se envía el formulario
+    commentForm.addEventListener("submit", (e) => {
+        e.preventDefault(); // Evita recargar la página
+
+        const text = commentInput.value.trim();
+        if (!text) return;
+
+        // Estructura del nuevo comentario (Usamos datos temporales para el usuario activo)
+        const newComment = {
+            id: Date.now(), // ID único basado en milisegundos
+            username: "Invitado", 
+            pfp: "/Assets/Default_pfp.jpg",
+            content: text,
+            date: "publicado ahora mismo"
+        };
+
+        // Guardar en LocalStorage y renderizar en pantalla
+        saveCommentToStorage(newComment);
+        renderComment(newComment);
+
+        // Limpiar el textarea
+        commentInput.value = "";
+    });
+
+    // 3. Función para renderizar un comentario en el HTML
+    function renderComment(comment) {
+        const reviewCard = document.createElement("div");
+        reviewCard.classList.add("review-card");
+        reviewCard.setAttribute("data-id", comment.id);
+
+        reviewCard.innerHTML = `
+            <div class="review-left">
+                <img src="${comment.pfp}" alt="usuario" class="profile-img">
+                <div class="review-content">
+                    <h3>${comment.username}</h3>
+                    <p>${comment.content}</p>
+                    <span>${comment.date}</span>
+                </div>
+            </div>
+            <div class="delete-comment-btn" style="cursor: pointer; color: #444444; font-size: 0.9rem; font-weight: bold; padding: 5px;" title="Eliminar reseña">
+                <i class="fa-solid fa-trash-can"></i>
+            </div>
+        `;
+
+        // Añadir evento de eliminación al icono de basura recién creado
+        const deleteBtn = reviewCard.querySelector(".delete-comment-btn");
+        deleteBtn.addEventListener("click", () => {
+            deleteComment(comment.id, reviewCard);
+        });
+
+        // Insertar el nuevo comentario justo debajo del formulario (al principio del contenedor)
+        reviewsContainer.insertBefore(reviewCard, reviewsContainer.firstChild);
+    }
+
+    // 4. Guardar comentarios en LocalStorage
+    function saveCommentToStorage(comment) {
+        let comments = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+        comments.push(comment);
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(comments));
+    }
+
+    // 5. Cargar comentarios desde LocalStorage
+    function loadComments() {
+        let comments = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+        // Los renderizamos uno a uno
+        comments.forEach(comment => renderComment(comment));
+    }
+
+    // 6. Función para eliminar comentarios
+    function deleteComment(id, commentElement) {
+        if (confirm("¿Estás seguro de que deseas eliminar esta reseña?")) {
+            // Eliminar del DOM (Vista)
+            commentElement.remove();
+
+            // Eliminar de LocalStorage (Memoria)
+            let comments = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+            comments = comments.filter(comment => comment.id !== id);
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(comments));
+        }
+    }
+});
+
 BotonFavorito();
