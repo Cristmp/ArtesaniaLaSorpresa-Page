@@ -26,7 +26,7 @@ const desplegarFavoritos = () => {
                     <i class="fa-solid fa-heart-crack fa-6x" style="color: #8d8d8d;"></i>
                     <h1>Todavía no hay favoritos</h1>
                     <p>Explora nuestro Catálogo para agregar productos a tus favoritos</p>
-                    <a href="/Pages/CatalogoPage.html" class="explorar-btn"><button>Explorar</button></a>
+                    <a href="../Pages/CatalogoPage.html" class="explorar-btn"><button>Explorar</button></a>
                 </div>`;
         return;
     }
@@ -59,7 +59,7 @@ const desplegarFavoritos = () => {
 
         card.addEventListener("click", () => {
             localStorage.setItem("idProductoSeleccionado", producto.id);
-            window.location.href = "/Pages/InfoProductMarina.html";
+            window.location.href = "../Pages/InfoProductMarina.html";
         });
 
         contenedorFavs.appendChild(card);

@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (productoId) {
                 localStorage.setItem("productoSeleccionado", productoId);
-                window.location.href = "/Pages/InfoProductMarina.html";
+                window.location.href = "../Pages/InfoProductMarina.html";
                 }
         });
     });
