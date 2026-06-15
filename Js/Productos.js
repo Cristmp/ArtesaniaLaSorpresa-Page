@@ -162,7 +162,7 @@ const desplegarProductos = (listaProduct) => {
 
             card.addEventListener("click", () => {
                 localStorage.setItem("productoSeleccionado", producto.id);
-                window.location.href = "/Pages/InfoProductMarina.html";
+                window.location.href = "../Pages/InfoProductMarina.html";
             });
         
             contenedor.appendChild(card);
