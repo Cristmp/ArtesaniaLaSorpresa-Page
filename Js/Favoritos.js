@@ -72,3 +72,10 @@ const desplegarFavoritos = () => {
 };
 
 desplegarFavoritos();
+
+const btnVolver = document.querySelector(".back-btn")
+if (btnVolver) {
+    btnVolver.addEventListener("click", () => {
+        window.history.back();
+    });
+}
