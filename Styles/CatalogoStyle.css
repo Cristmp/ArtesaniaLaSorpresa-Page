@@ -412,7 +412,7 @@
 }
 
 .searching.searching-hidden {
-    top: -10rem;
+    top: -15rem;
 }
 
 .values{
@@ -782,7 +782,7 @@
     flex-direction: column;
     gap: 1.5rem;
     padding: 1.5rem 1rem;
-    top: 4rem; 
+    top: 6rem; 
     margin-top: 6rem;
   }
 
@@ -802,14 +802,15 @@
     justify-content: center;
   }
 
-  .btn-favoritos, .btn-ubi {
-    width: 100%;
-    max-width: 300px; 
-    justify-content: center;
+   .btn-ubi {
+    display: none;
   }
 
   .searching a{
-    display: none;
+    display: block;
+    width: 100%;
+    max-width: 300px; 
+    justify-content: center;
   }
 
   .section-products{
